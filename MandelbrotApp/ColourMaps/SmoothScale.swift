@@ -33,10 +33,8 @@ struct SmoothScale: ColourMapProtocol {
             let s = (s2 - s1) * CGFloat(i) + s1
             let v = (v2 - v1) * CGFloat(i) + v1
             let colour = UIColor(hue: h, saturation: s, brightness: v, alpha: 1.0)
-            let red = UInt8(255 * colour.ciColor.red)
-            let green = UInt8(255 * colour.ciColor.green)
-            let blue = UInt8(255 * colour.ciColor.blue)
-            pixels.append(Pixel(r: red, g: green, b: blue))
+            let (r, g, b, _) = colour.rgbaInt
+            pixels.append(Pixel(r: r, g: g, b: b))
         }
         return pixels
     }

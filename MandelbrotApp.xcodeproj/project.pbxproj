@@ -24,6 +24,10 @@
 		4E263B6F214AFFCC00D8D920 /* ColourMapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B6A214AFFCC00D8D920 /* ColourMapProtocol.swift */; };
 		4E263B70214AFFCC00D8D920 /* ManyColourGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B6B214AFFCC00D8D920 /* ManyColourGradient.swift */; };
 		4E263B71214AFFCC00D8D920 /* YellowScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B6C214AFFCC00D8D920 /* YellowScale.swift */; };
+		4E263B74214B027300D8D920 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B73214B027300D8D920 /* UIImage+Extension.swift */; };
+		4E263B76214B06BD00D8D920 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */; };
+		4E263B78214B0EAA00D8D920 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */; };
+		4E263B7A214B128000D8D920 /* ColourMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B79214B128000D8D920 /* ColourMapFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		4E263B6A214AFFCC00D8D920 /* ColourMapProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourMapProtocol.swift; sourceTree = "<group>"; };
 		4E263B6B214AFFCC00D8D920 /* ManyColourGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManyColourGradient.swift; sourceTree = "<group>"; };
 		4E263B6C214AFFCC00D8D920 /* YellowScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowScale.swift; sourceTree = "<group>"; };
+		4E263B73214B027300D8D920 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
+		4E263B79214B128000D8D920 /* ColourMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 		4E263B45214AFB3000D8D920 /* MandelbrotApp */ = {
 			isa = PBXGroup;
 			children = (
+				4E263B72214B026800D8D920 /* Extensions */,
 				4E263B59214AFFAB00D8D920 /* ColourMaps */,
 				4E263B58214AFFA400D8D920 /* Model */,
 				4E263B46214AFB3000D8D920 /* AppDelegate.swift */,
@@ -112,8 +121,19 @@
 				4E263B6B214AFFCC00D8D920 /* ManyColourGradient.swift */,
 				4E263B68214AFFCC00D8D920 /* SmoothScale.swift */,
 				4E263B6C214AFFCC00D8D920 /* YellowScale.swift */,
+				4E263B79214B128000D8D920 /* ColourMapFactory.swift */,
 			);
 			path = ColourMaps;
+			sourceTree = "<group>";
+		};
+		4E263B72214B026800D8D920 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E263B73214B027300D8D920 /* UIImage+Extension.swift */,
+				4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */,
+				4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,16 +209,20 @@
 			files = (
 				4E263B71214AFFCC00D8D920 /* YellowScale.swift in Sources */,
 				4E263B6D214AFFCC00D8D920 /* SmoothScale.swift in Sources */,
+				4E263B74214B027300D8D920 /* UIImage+Extension.swift in Sources */,
 				4E263B66214AFFBE00D8D920 /* Pixel.swift in Sources */,
 				4E263B6F214AFFCC00D8D920 /* ColourMapProtocol.swift in Sources */,
+				4E263B76214B06BD00D8D920 /* UIColor+Extension.swift in Sources */,
 				4E263B67214AFFBE00D8D920 /* ComplexNumber.swift in Sources */,
 				4E263B49214AFB3000D8D920 /* ViewController.swift in Sources */,
+				4E263B78214B0EAA00D8D920 /* CGPoint+Extension.swift in Sources */,
 				4E263B47214AFB3000D8D920 /* AppDelegate.swift in Sources */,
 				4E263B62214AFFBE00D8D920 /* MandelbrotSetConfig.swift in Sources */,
 				4E263B61214AFFBE00D8D920 /* MandelbrotSet.swift in Sources */,
 				4E263B6E214AFFCC00D8D920 /* GreyScale.swift in Sources */,
 				4E263B63214AFFBE00D8D920 /* Transformation.swift in Sources */,
 				4E263B64214AFFBE00D8D920 /* MandelbrotSetPoint.swift in Sources */,
+				4E263B7A214B128000D8D920 /* ColourMapFactory.swift in Sources */,
 				4E263B70214AFFCC00D8D920 /* ManyColourGradient.swift in Sources */,
 				4E263B65214AFFBE00D8D920 /* Rectangle.swift in Sources */,
 			);
@@ -349,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T59AZ797LW;
 				INFOPLIST_FILE = MandelbrotApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T59AZ797LW;
 				INFOPLIST_FILE = MandelbrotApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

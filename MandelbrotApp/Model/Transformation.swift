@@ -41,4 +41,9 @@ struct Transformation {
     func transform(z: ComplexNumber) -> CGRect {
         return CGRect(x: mx * z.x + cx, y: my * z.y + cy, width: 1, height: 1)
     }
+
+
+    func transform(point: CGPoint) -> ComplexNumber {
+        return ComplexNumber(x: mx * Double(point.x) + cx, y: my * Double(point.y) + cy)
+    }
 }
