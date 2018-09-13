@@ -12,6 +12,18 @@
 		4E263B4C214AFB3000D8D920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4A214AFB3000D8D920 /* Main.storyboard */; };
 		4E263B4E214AFB3100D8D920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4D214AFB3100D8D920 /* Assets.xcassets */; };
 		4E263B51214AFB3100D8D920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */; };
+		4E263B61214AFFBE00D8D920 /* MandelbrotSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B5A214AFFBE00D8D920 /* MandelbrotSet.swift */; };
+		4E263B62214AFFBE00D8D920 /* MandelbrotSetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B5B214AFFBE00D8D920 /* MandelbrotSetConfig.swift */; };
+		4E263B63214AFFBE00D8D920 /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B5C214AFFBE00D8D920 /* Transformation.swift */; };
+		4E263B64214AFFBE00D8D920 /* MandelbrotSetPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B5D214AFFBE00D8D920 /* MandelbrotSetPoint.swift */; };
+		4E263B65214AFFBE00D8D920 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B5E214AFFBE00D8D920 /* Rectangle.swift */; };
+		4E263B66214AFFBE00D8D920 /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B5F214AFFBE00D8D920 /* Pixel.swift */; };
+		4E263B67214AFFBE00D8D920 /* ComplexNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B60214AFFBE00D8D920 /* ComplexNumber.swift */; };
+		4E263B6D214AFFCC00D8D920 /* SmoothScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B68214AFFCC00D8D920 /* SmoothScale.swift */; };
+		4E263B6E214AFFCC00D8D920 /* GreyScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B69214AFFCC00D8D920 /* GreyScale.swift */; };
+		4E263B6F214AFFCC00D8D920 /* ColourMapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B6A214AFFCC00D8D920 /* ColourMapProtocol.swift */; };
+		4E263B70214AFFCC00D8D920 /* ManyColourGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B6B214AFFCC00D8D920 /* ManyColourGradient.swift */; };
+		4E263B71214AFFCC00D8D920 /* YellowScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B6C214AFFCC00D8D920 /* YellowScale.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +34,18 @@
 		4E263B4D214AFB3100D8D920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E263B50214AFB3100D8D920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E263B52214AFB3100D8D920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E263B5A214AFFBE00D8D920 /* MandelbrotSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotSet.swift; sourceTree = "<group>"; };
+		4E263B5B214AFFBE00D8D920 /* MandelbrotSetConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotSetConfig.swift; sourceTree = "<group>"; };
+		4E263B5C214AFFBE00D8D920 /* Transformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
+		4E263B5D214AFFBE00D8D920 /* MandelbrotSetPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotSetPoint.swift; sourceTree = "<group>"; };
+		4E263B5E214AFFBE00D8D920 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		4E263B5F214AFFBE00D8D920 /* Pixel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
+		4E263B60214AFFBE00D8D920 /* ComplexNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexNumber.swift; sourceTree = "<group>"; };
+		4E263B68214AFFCC00D8D920 /* SmoothScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothScale.swift; sourceTree = "<group>"; };
+		4E263B69214AFFCC00D8D920 /* GreyScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreyScale.swift; sourceTree = "<group>"; };
+		4E263B6A214AFFCC00D8D920 /* ColourMapProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourMapProtocol.swift; sourceTree = "<group>"; };
+		4E263B6B214AFFCC00D8D920 /* ManyColourGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManyColourGradient.swift; sourceTree = "<group>"; };
+		4E263B6C214AFFCC00D8D920 /* YellowScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowScale.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,8 @@
 		4E263B45214AFB3000D8D920 /* MandelbrotApp */ = {
 			isa = PBXGroup;
 			children = (
+				4E263B59214AFFAB00D8D920 /* ColourMaps */,
+				4E263B58214AFFA400D8D920 /* Model */,
 				4E263B46214AFB3000D8D920 /* AppDelegate.swift */,
 				4E263B48214AFB3000D8D920 /* ViewController.swift */,
 				4E263B4A214AFB3000D8D920 /* Main.storyboard */,
@@ -62,6 +88,32 @@
 				4E263B52214AFB3100D8D920 /* Info.plist */,
 			);
 			path = MandelbrotApp;
+			sourceTree = "<group>";
+		};
+		4E263B58214AFFA400D8D920 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E263B60214AFFBE00D8D920 /* ComplexNumber.swift */,
+				4E263B5A214AFFBE00D8D920 /* MandelbrotSet.swift */,
+				4E263B5B214AFFBE00D8D920 /* MandelbrotSetConfig.swift */,
+				4E263B5D214AFFBE00D8D920 /* MandelbrotSetPoint.swift */,
+				4E263B5F214AFFBE00D8D920 /* Pixel.swift */,
+				4E263B5E214AFFBE00D8D920 /* Rectangle.swift */,
+				4E263B5C214AFFBE00D8D920 /* Transformation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E263B59214AFFAB00D8D920 /* ColourMaps */ = {
+			isa = PBXGroup;
+			children = (
+				4E263B6A214AFFCC00D8D920 /* ColourMapProtocol.swift */,
+				4E263B69214AFFCC00D8D920 /* GreyScale.swift */,
+				4E263B6B214AFFCC00D8D920 /* ManyColourGradient.swift */,
+				4E263B68214AFFCC00D8D920 /* SmoothScale.swift */,
+				4E263B6C214AFFCC00D8D920 /* YellowScale.swift */,
+			);
+			path = ColourMaps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +187,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E263B71214AFFCC00D8D920 /* YellowScale.swift in Sources */,
+				4E263B6D214AFFCC00D8D920 /* SmoothScale.swift in Sources */,
+				4E263B66214AFFBE00D8D920 /* Pixel.swift in Sources */,
+				4E263B6F214AFFCC00D8D920 /* ColourMapProtocol.swift in Sources */,
+				4E263B67214AFFBE00D8D920 /* ComplexNumber.swift in Sources */,
 				4E263B49214AFB3000D8D920 /* ViewController.swift in Sources */,
 				4E263B47214AFB3000D8D920 /* AppDelegate.swift in Sources */,
+				4E263B62214AFFBE00D8D920 /* MandelbrotSetConfig.swift in Sources */,
+				4E263B61214AFFBE00D8D920 /* MandelbrotSet.swift in Sources */,
+				4E263B6E214AFFCC00D8D920 /* GreyScale.swift in Sources */,
+				4E263B63214AFFBE00D8D920 /* Transformation.swift in Sources */,
+				4E263B64214AFFBE00D8D920 /* MandelbrotSetPoint.swift in Sources */,
+				4E263B70214AFFCC00D8D920 /* ManyColourGradient.swift in Sources */,
+				4E263B65214AFFBE00D8D920 /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

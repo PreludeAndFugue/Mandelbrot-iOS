@@ -10,11 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func reset(_ sender: Any) {
+        print("reset")
     }
 
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
 
