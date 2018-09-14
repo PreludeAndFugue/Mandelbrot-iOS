@@ -10,6 +10,7 @@ import Foundation
 
 struct ManyColourGradient: ColourMapProtocol {
 
+    internal let title = "Many colour gradient"
     internal let pixels: [Pixel]
     internal let blackPixel = Pixel(r: 0, g: 0, b: 0)
 

@@ -13,6 +13,7 @@ protocol ColourMapProtocol {
 
     typealias RGB = (r: UInt8, g: UInt8, b: UInt8)
 
+    var title: String { get }
     var blackPixel: Pixel { get }
     var pixels: [Pixel] { get }
     func pixel(from test: MandelbrotSetPoint.Test) -> Pixel

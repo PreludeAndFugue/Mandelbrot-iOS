@@ -23,6 +23,7 @@ final class MainVC: UIViewController {
 
     @IBAction func recolour(_ sender: Any) {
         print("recolour")
+        ColourChooserVC.present(for: self)
     }
 
 
@@ -41,6 +42,8 @@ final class MainVC: UIViewController {
     }
 }
 
+
+// MARK: - Private
 
 private extension MainVC {
     func generateImage() {

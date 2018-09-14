@@ -20,7 +20,6 @@ final class MainVCData {
 
 
     init(width: Int, height: Int) {
-        print("main data", width, height)
         self.width = width
         self.height = height
         self.colourMap = colourMaps[1]
