@@ -13,7 +13,7 @@ final class ViewController: UIViewController {
     var mandelbrotSet: MandelbrotSet?
     var config: MandelbrotSetConfig!
 
-
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var mandelbrotImage: UIImageView!
 
 
@@ -60,11 +60,25 @@ private extension ViewController {
 
 
     func makeSet(with config: MandelbrotSetConfig) {
-        mandelbrotSet = MandelbrotSet(config: config)
-        let colourMap = colourMaps[2]
-        let pixels = mandelbrotSet!.grid.map({ colourMap.pixel(from: $0.test) })
-        let image = UIImage.from(pixels: pixels, width: mandelbrotSet!.imageSize.width, height: mandelbrotSet!.imageSize.height)
-        mandelbrotImage.image = image
+
+        let progress = Progress(totalUnitCount: 100)
+        progressView.observedProgress = progress
+        progressView.isHidden = false
+
+        DispatchQueue.global().async {
+            self.mandelbrotSet = MandelbrotSet(config: config, progress: progress)
+            let colourMap = self.colourMaps[0]
+            let pixels = self.mandelbrotSet!.grid.map({ colourMap.pixel(from: $0.test) })
+            let image = UIImage.from(
+                pixels: pixels,
+                width: self.mandelbrotSet!.imageSize.width,
+                height: self.mandelbrotSet!.imageSize.height
+            )
+            DispatchQueue.main.async {
+                self.mandelbrotImage.image = image
+                self.progressView.isHidden = true
+            }
+        }
     }
 
 

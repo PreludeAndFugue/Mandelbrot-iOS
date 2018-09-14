@@ -26,16 +26,22 @@ struct MandelbrotSet {
     var imageSize: (width: Int, height: Int)
 
 
-    init(config: MandelbrotSetConfig) {
+    init(config: MandelbrotSetConfig, progress: Progress) {
         self.iterations = config.iterations
         let ys = Array(stride(from: config.yMin, to: config.yMax, by: config.dy))
         let xs = Array(stride(from: config.xMin, to: config.xMax, by: config.dx))
         imageSize = (xs.count, ys.count)
-        for y in ys {
+
+        let countFraction = Double(100) / Double(imageSize.height)
+
+        for (i, y) in ys.enumerated() {
             for x in xs {
                 let z = ComplexNumber(x: x, y: y)
                 grid.append(MandelbrotSetPoint(point: z, test: isInSetFast(point: z)))
             }
+
+            let completedUnitCount = Int64(Double(i)*countFraction)
+            progress.completedUnitCount = completedUnitCount
         }
     }
 

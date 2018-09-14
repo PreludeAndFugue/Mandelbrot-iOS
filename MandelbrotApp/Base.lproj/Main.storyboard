@@ -43,6 +43,15 @@
                                     <action selector="recolour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOQ-g0-egR"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Hj-ch-9Su">
+                                <rect key="frame" x="323" y="194.5" width="250" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="0Ay-B1-6OO"/>
+                                    <constraint firstAttribute="height" constant="4" id="pfG-oi-ZU4"/>
+                                </constraints>
+                                <color key="progressTintColor" red="1" green="0.31520545210000001" blue="0.56466178560000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -52,14 +61,17 @@
                             <constraint firstItem="zBR-dH-f4p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UUo-FX-RX4"/>
                             <constraint firstItem="mj0-Wi-tfr" firstAttribute="top" secondItem="wgH-OJ-6tx" secondAttribute="bottom" constant="8" id="gvI-CN-tiA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wgH-OJ-6tx" secondAttribute="trailing" constant="4" id="jod-pM-Dbu"/>
+                            <constraint firstItem="8Hj-ch-9Su" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oqO-0G-H50"/>
                             <constraint firstItem="wgH-OJ-6tx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="rsK-d2-AKi"/>
                             <constraint firstAttribute="bottom" secondItem="zBR-dH-f4p" secondAttribute="bottom" id="vN1-Fw-90Z"/>
+                            <constraint firstItem="8Hj-ch-9Su" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ymT-qZ-5Xv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mj0-Wi-tfr" secondAttribute="trailing" constant="4" id="zfV-Ah-ZfB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mandelbrotImage" destination="zBR-dH-f4p" id="VJf-ar-YdA"/>
+                        <outlet property="progressView" destination="8Hj-ch-9Su" id="06d-m0-NJC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

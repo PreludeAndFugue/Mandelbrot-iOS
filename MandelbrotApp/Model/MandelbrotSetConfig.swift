@@ -60,7 +60,7 @@ struct MandelbrotSetConfig: CustomStringConvertible {
     }
 
     var dy: Double {
-        return height/Double(imageWidth)
+        return height/Double(imageHeight)
     }
 
     var description: String {
