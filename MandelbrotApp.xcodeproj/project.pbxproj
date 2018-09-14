@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E263B47214AFB3000D8D920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B46214AFB3000D8D920 /* AppDelegate.swift */; };
-		4E263B49214AFB3000D8D920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B48214AFB3000D8D920 /* ViewController.swift */; };
+		4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B48214AFB3000D8D920 /* MainVC.swift */; };
 		4E263B4C214AFB3000D8D920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4A214AFB3000D8D920 /* Main.storyboard */; };
 		4E263B4E214AFB3100D8D920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4D214AFB3100D8D920 /* Assets.xcassets */; };
 		4E263B51214AFB3100D8D920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */; };
@@ -28,12 +28,13 @@
 		4E263B76214B06BD00D8D920 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */; };
 		4E263B78214B0EAA00D8D920 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */; };
 		4E263B7A214B128000D8D920 /* ColourMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B79214B128000D8D920 /* ColourMapFactory.swift */; };
+		4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E263B43214AFB3000D8D920 /* MandelbrotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandelbrotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E263B46214AFB3000D8D920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E263B48214AFB3000D8D920 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E263B48214AFB3000D8D920 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4E263B4B214AFB3000D8D920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E263B4D214AFB3100D8D920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E263B50214AFB3100D8D920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		4E263B79214B128000D8D920 /* ColourMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapFactory.swift; sourceTree = "<group>"; };
+		4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,8 @@
 				4E263B59214AFFAB00D8D920 /* ColourMaps */,
 				4E263B58214AFFA400D8D920 /* Model */,
 				4E263B46214AFB3000D8D920 /* AppDelegate.swift */,
-				4E263B48214AFB3000D8D920 /* ViewController.swift */,
+				4E263B48214AFB3000D8D920 /* MainVC.swift */,
+				4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */,
 				4E263B4A214AFB3000D8D920 /* Main.storyboard */,
 				4E263B4D214AFB3100D8D920 /* Assets.xcassets */,
 				4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */,
@@ -211,10 +214,11 @@
 				4E263B6D214AFFCC00D8D920 /* SmoothScale.swift in Sources */,
 				4E263B74214B027300D8D920 /* UIImage+Extension.swift in Sources */,
 				4E263B66214AFFBE00D8D920 /* Pixel.swift in Sources */,
+				4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */,
 				4E263B6F214AFFCC00D8D920 /* ColourMapProtocol.swift in Sources */,
 				4E263B76214B06BD00D8D920 /* UIColor+Extension.swift in Sources */,
 				4E263B67214AFFBE00D8D920 /* ComplexNumber.swift in Sources */,
-				4E263B49214AFB3000D8D920 /* ViewController.swift in Sources */,
+				4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */,
 				4E263B78214B0EAA00D8D920 /* CGPoint+Extension.swift in Sources */,
 				4E263B47214AFB3000D8D920 /* AppDelegate.swift in Sources */,
 				4E263B62214AFFBE00D8D920 /* MandelbrotSetConfig.swift in Sources */,

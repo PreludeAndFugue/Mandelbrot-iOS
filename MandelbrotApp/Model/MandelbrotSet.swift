@@ -13,21 +13,18 @@
 //
 
 import Foundation
+import UIKit
 
 struct MandelbrotSet {
 
-    let xMin = -2.0
-    let xMax = 1.0
-    let yMin = -1.5
-    let yMax = 1.5
-    let iterations: Int
+    let config: MandelbrotSetConfig
 
     var grid: [MandelbrotSetPoint] = []
     var imageSize: (width: Int, height: Int)
 
 
     init(config: MandelbrotSetConfig, progress: Progress) {
-        self.iterations = config.iterations
+        self.config = config
         let ys = Array(stride(from: config.yMin, to: config.yMax, by: config.dy))
         let xs = Array(stride(from: config.xMin, to: config.xMax, by: config.dx))
         imageSize = (xs.count, ys.count)
@@ -46,6 +43,12 @@ struct MandelbrotSet {
     }
 
 
+    func image(with colourMap: ColourMapProtocol) -> UIImage {
+        let pixels = grid.map({ colourMap.pixel(from: $0.test )})
+        return UIImage.from(pixels: pixels, width: imageSize.width, height: imageSize.height)
+    }
+
+
     func gridIterations(config: MandelbrotSetConfig) -> Int {
         var total = 0
         for point in grid {
@@ -58,13 +61,15 @@ struct MandelbrotSet {
         }
         return total
     }
+}
 
 
-    // MARK:- Private
+// MARK: - Private
 
-    private func isInSet(point: ComplexNumber) -> MandelbrotSetPoint.Test {
+private extension MandelbrotSet {
+    func isInSet(point: ComplexNumber) -> MandelbrotSetPoint.Test {
         var z = point
-        for i in 0 ..< iterations {
+        for i in 0 ..< config.iterations {
             if z.modulus() >= 4 {
                 return .notInSet(iterations: i, finalPoint: z)
             }
@@ -75,10 +80,10 @@ struct MandelbrotSet {
 
 
     // Maybe this could be faster because not using operator overloading on the ComplexNumber struct
-    private func isInSetFast(point: ComplexNumber) -> MandelbrotSetPoint.Test {
+    func isInSetFast(point: ComplexNumber) -> MandelbrotSetPoint.Test {
         let (u, v) = (point.x, point.y)
         var (x, y) = (point.x, point.y)
-        for i in 0 ..< iterations {
+        for i in 0 ..< config.iterations {
             if x*x + y*y >= 4 {
                 return .notInSet(iterations: i, finalPoint: ComplexNumber(x: x, y: y))
             }
