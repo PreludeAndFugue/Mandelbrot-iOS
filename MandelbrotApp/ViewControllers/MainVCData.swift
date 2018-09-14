@@ -47,6 +47,16 @@ final class MainVCData {
             }
         }
     }
+
+
+    func chooseColourMap(atIndex: Int) {
+        colourMap = colourMaps[atIndex]
+    }
+
+
+    func recolourImage() -> UIImage {
+        return mandelbrotSet!.image(with: colourMap)
+    }
 }
 
 

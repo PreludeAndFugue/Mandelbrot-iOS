@@ -22,7 +22,6 @@ final class MainVC: UIViewController {
 
 
     @IBAction func recolour(_ sender: Any) {
-        print("recolour")
         ColourChooserVC.present(for: self)
     }
 
@@ -63,5 +62,16 @@ private extension MainVC {
     func generateImageCompletion(image: UIImage) {
         mandelbrotImage.image = image
         progressView.isHidden = true
+    }
+}
+
+
+// MARK: - ColourChooserVCDelegate
+
+extension MainVC: ColourChooserVCDelegate {
+    func didSelect(_ vc: ColourChooserVC, index: Int) {
+        dismiss(animated: true, completion: nil)
+        data.chooseColourMap(atIndex: index)
+        mandelbrotImage.image = data.recolourImage()
     }
 }

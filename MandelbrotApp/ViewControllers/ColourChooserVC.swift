@@ -8,9 +8,17 @@
 
 import UIKit
 
+typealias ColourChooserPresenter = UIViewController & ColourChooserVCDelegate
+
+protocol ColourChooserVCDelegate: class {
+    func didSelect(_ vc: ColourChooserVC, index: Int)
+}
+
+
 class ColourChooserVC: UITableViewController {
 
     var presentr: Presentr?
+    weak var delegate: ColourChooserVCDelegate?
     let colourMaps = ColourMapFactory.maps
 
     override func viewDidLoad() {
@@ -35,18 +43,24 @@ class ColourChooserVC: UITableViewController {
         cell.textLabel?.text = colourMaps[indexPath.row].title
         return cell
     }
+
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelect(self, index: indexPath.row)
+    }
 }
 
 
 // MARK: - Static
 
 extension ColourChooserVC {
-    static func present(for viewController: UIViewController) {
+    static func present(for presenter: ColourChooserPresenter) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ColourChooserVC") as? ColourChooserVC else { fatalError() }
         let presentr = Presentr(presentationType: .custom(width: .custom(size: 250), height: .fluid(percentage: 0.8), center: .center))
         presentr.cornerRadius = 4
         vc.presentr = presentr
-        viewController.customPresentViewController(presentr, viewController: vc, animated: true)
+        vc.delegate = presenter
+        presenter.customPresentViewController(presentr, viewController: vc, animated: true)
     }
 }
