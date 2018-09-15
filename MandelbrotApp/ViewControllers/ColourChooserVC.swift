@@ -18,6 +18,7 @@ protocol ColourChooserVCDelegate: class {
 class ColourChooserVC: UITableViewController {
 
     var presentr: Presentr?
+    var colourMapIndex: Int!
     weak var delegate: ColourChooserVCDelegate?
     let colourMaps = ColourMapFactory.maps
 
@@ -41,6 +42,7 @@ class ColourChooserVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ColourChooserCell", for: indexPath)
         cell.textLabel?.text = colourMaps[indexPath.row].title
+        cell.accessoryType = indexPath.row == colourMapIndex ? .checkmark : .none
         return cell
     }
 
@@ -54,13 +56,14 @@ class ColourChooserVC: UITableViewController {
 // MARK: - Static
 
 extension ColourChooserVC {
-    static func present(for presenter: ColourChooserPresenter) {
+    static func present(for presenter: ColourChooserPresenter, colourMapIndex: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ColourChooserVC") as? ColourChooserVC else { fatalError() }
         let presentr = Presentr(presentationType: .custom(width: .custom(size: 250), height: .fluid(percentage: 0.8), center: .center))
         presentr.cornerRadius = 4
         vc.presentr = presentr
         vc.delegate = presenter
+        vc.colourMapIndex = colourMapIndex
         presenter.customPresentViewController(presentr, viewController: vc, animated: true)
     }
 }

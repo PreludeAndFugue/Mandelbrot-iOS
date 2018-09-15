@@ -10,19 +10,21 @@ import Foundation
 import UIKit
 
 final class MainVCData {
-    let width: Int
-    let height: Int
+    private let width: Int
+    private let height: Int
 
-    let colourMaps = ColourMapFactory.maps
-    var colourMap: ColourMapProtocol
-    var mandelbrotSet: MandelbrotSet!
-    var config: MandelbrotSetConfig
+    private let colourMaps = ColourMapFactory.maps
+    private var colourMap: ColourMapProtocol
+    var colourMapIndex: Int
+    private var mandelbrotSet: MandelbrotSet!
+    private var config: MandelbrotSetConfig
 
 
     init(width: Int, height: Int) {
         self.width = width
         self.height = height
-        self.colourMap = colourMaps[1]
+        self.colourMap = colourMaps[0]
+        self.colourMapIndex = 0
         self.config = MandelbrotSetConfig(imageWidth: width, imageHeight: height)
     }
 
@@ -50,6 +52,7 @@ final class MainVCData {
 
 
     func chooseColourMap(atIndex: Int) {
+        colourMapIndex = atIndex
         colourMap = colourMaps[atIndex]
     }
 

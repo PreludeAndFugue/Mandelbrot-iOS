@@ -22,7 +22,7 @@ final class MainVC: UIViewController {
 
 
     @IBAction func recolour(_ sender: Any) {
-        ColourChooserVC.present(for: self)
+        ColourChooserVC.present(for: self, colourMapIndex: data.colourMapIndex)
     }
 
 
