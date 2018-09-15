@@ -29,6 +29,11 @@ final class MainVCData {
     }
 
 
+    var info: String {
+        return config.description
+    }
+
+
     func reset() {
         config = MandelbrotSetConfig(imageWidth: width, imageHeight: height)
     }

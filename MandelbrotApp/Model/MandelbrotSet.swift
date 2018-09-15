@@ -19,8 +19,8 @@ struct MandelbrotSet {
 
     let config: MandelbrotSetConfig
 
-    var grid: [MandelbrotSetPoint] = []
-    var imageSize: (width: Int, height: Int)
+    private var grid: [MandelbrotSetPoint] = []
+    private var imageSize: (width: Int, height: Int)
 
 
     init(config: MandelbrotSetConfig, progress: Progress) {

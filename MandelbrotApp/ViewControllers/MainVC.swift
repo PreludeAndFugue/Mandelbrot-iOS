@@ -27,7 +27,7 @@ final class MainVC: UIViewController {
 
 
     @IBAction func displayInfo(_ sender: Any) {
-        print("display info")
+        InfoVC.present(for: self, info: data.info)
     }
 
 

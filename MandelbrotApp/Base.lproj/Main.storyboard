@@ -129,7 +129,43 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncU-QP-she" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="938"/>
+            <point key="canvasLocation" x="124" y="916"/>
+        </scene>
+        <!--InfoVC-->
+        <scene sceneID="tfA-5G-wYK">
+            <objects>
+                <viewController storyboardIdentifier="InfoVC" id="E9U-7G-xYn" customClass="InfoVC" customModule="MandelbrotApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O9b-jq-iEE">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzC-1R-mNZ">
+                                <rect key="frame" x="44" y="0.0" width="362" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="362" id="xR5-ID-JUY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KzC-1R-mNZ" firstAttribute="top" secondItem="rjR-Ss-kyj" secondAttribute="top" id="2kK-0U-7Ht"/>
+                            <constraint firstItem="rjR-Ss-kyj" firstAttribute="bottom" secondItem="KzC-1R-mNZ" secondAttribute="bottom" id="Z64-E4-voa"/>
+                            <constraint firstItem="KzC-1R-mNZ" firstAttribute="leading" secondItem="rjR-Ss-kyj" secondAttribute="leading" id="bns-BI-H74"/>
+                            <constraint firstItem="rjR-Ss-kyj" firstAttribute="trailing" secondItem="KzC-1R-mNZ" secondAttribute="trailing" id="kbe-CJ-8EO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rjR-Ss-kyj"/>
+                    </view>
+                    <size key="freeformSize" width="450" height="414"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="KzC-1R-mNZ" id="yOl-la-Gwm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObP-aB-kyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="1722"/>
         </scene>
     </scenes>
 </document>

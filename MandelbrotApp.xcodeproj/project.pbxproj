@@ -51,6 +51,7 @@
 		4EA6B609214C72F700DA8964 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EA6B5F3214C72F700DA8964 /* SourceSansPro-Regular.ttf */; };
 		4EA6B60A214C72F700DA8964 /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5F4214C72F700DA8964 /* TransitionType.swift */; };
 		4EA6B60C214C761700DA8964 /* ColourChooserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B60B214C761700DA8964 /* ColourChooserVC.swift */; };
+		4EC2FEC2214C8F5C00DEEDC4 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2FEC1214C8F5C00DEEDC4 /* InfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		4EA6B5F3214C72F700DA8964 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 		4EA6B5F4214C72F700DA8964 /* TransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
 		4EA6B60B214C761700DA8964 /* ColourChooserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourChooserVC.swift; sourceTree = "<group>"; };
+		4EC2FEC1214C8F5C00DEEDC4 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				4E263B48214AFB3000D8D920 /* MainVC.swift */,
 				4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */,
 				4EA6B60B214C761700DA8964 /* ColourChooserVC.swift */,
+				4EC2FEC1214C8F5C00DEEDC4 /* InfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				4E263B7A214B128000D8D920 /* ColourMapFactory.swift in Sources */,
 				4E263B70214AFFCC00D8D920 /* ManyColourGradient.swift in Sources */,
 				4E263B65214AFFBE00D8D920 /* Rectangle.swift in Sources */,
+				4EC2FEC2214C8F5C00DEEDC4 /* InfoVC.swift in Sources */,
 				4EA6B5FF214C72F700DA8964 /* CoverVerticalAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
