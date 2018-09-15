@@ -26,6 +26,11 @@ final class MainVC: UIViewController {
     }
 
 
+    @IBAction func displayInfo(_ sender: Any) {
+        print("display info")
+    }
+
+
     @IBAction func tapImage(recogniser: UITapGestureRecognizer) {
         let imageCoords = recogniser.location(in: mandelbrotImage)
         data.zoomIn(at: imageCoords)

@@ -47,6 +47,17 @@
                                     <action selector="recolour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOQ-g0-egR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzU-Sw-hIj">
+                                <rect key="frame" x="802" y="80" width="46" height="28"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.19926155819999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" title="Info">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3AZ-Q0-44M"/>
+                                </connections>
+                            </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Hj-ch-9Su">
                                 <rect key="frame" x="323" y="194.5" width="250" height="4"/>
                                 <constraints>
@@ -60,9 +71,13 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zBR-dH-f4p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8dT-rY-Sgn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SzU-Sw-hIj" secondAttribute="trailing" constant="4" id="BJo-kI-6ou"/>
                             <constraint firstItem="wgH-OJ-6tx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="ECU-Jm-nx5"/>
+                            <constraint firstItem="mj0-Wi-tfr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="HSu-OY-Cym"/>
                             <constraint firstAttribute="trailing" secondItem="zBR-dH-f4p" secondAttribute="trailing" id="S1H-8E-aeS"/>
                             <constraint firstItem="zBR-dH-f4p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UUo-FX-RX4"/>
+                            <constraint firstItem="SzU-Sw-hIj" firstAttribute="top" secondItem="mj0-Wi-tfr" secondAttribute="bottom" constant="8" id="UVw-7Q-4Ca"/>
+                            <constraint firstItem="SzU-Sw-hIj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="fdR-ht-ipg"/>
                             <constraint firstItem="mj0-Wi-tfr" firstAttribute="top" secondItem="wgH-OJ-6tx" secondAttribute="bottom" constant="8" id="gvI-CN-tiA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wgH-OJ-6tx" secondAttribute="trailing" constant="4" id="jod-pM-Dbu"/>
                             <constraint firstItem="8Hj-ch-9Su" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oqO-0G-H50"/>
