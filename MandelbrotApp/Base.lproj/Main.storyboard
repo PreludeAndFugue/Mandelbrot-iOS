@@ -26,8 +26,11 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-OJ-6tx">
-                                <rect key="frame" x="791" y="8" width="57" height="28"/>
+                                <rect key="frame" x="791" y="8" width="57" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.1992615582191781" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K83-O1-xi3"/>
+                                </constraints>
                                 <inset key="contentEdgeInsets" minX="10" minY="5" maxX="8" maxY="5"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,8 +40,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj0-Wi-tfr" userLabel="Colour">
-                                <rect key="frame" x="782" y="44" width="66" height="28"/>
+                                <rect key="frame" x="782" y="56" width="66" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.19926155819999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FOO-rB-qKJ"/>
+                                </constraints>
                                 <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                 <state key="normal" title="Colour">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,8 +54,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzU-Sw-hIj">
-                                <rect key="frame" x="802" y="80" width="46" height="28"/>
+                                <rect key="frame" x="802" y="104" width="46" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.19926155819999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="j3R-cV-sMw"/>
+                                </constraints>
                                 <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                 <state key="normal" title="Info">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
