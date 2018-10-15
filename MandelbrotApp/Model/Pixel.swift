@@ -18,4 +18,9 @@ struct Pixel {
         self.g = g
         self.b = b
     }
+
+
+    var isBlack: Bool {
+        return r == 0 && g == 0 && b == 0
+    }
 }

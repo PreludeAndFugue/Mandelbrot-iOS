@@ -10,12 +10,18 @@ import Foundation
 
 struct ManyColourGradient: ColourMapProtocol {
 
-    internal let title = "Many colour gradient"
+    var title: String {
+        return "Many colour gradient: \(colourCount)"
+    }
+    
     internal let pixels: [Pixel]
     internal let blackPixel = Pixel(r: 0, g: 0, b: 0)
 
+    private let colourCount: Int
+
 
     init(n: Int, colours: RGB...) {
+        colourCount = colours.count
         var secondColours = Array(colours[1 ... colours.count - 1])
         secondColours.append(colours.first!)
         pixels = zip(colours, secondColours)

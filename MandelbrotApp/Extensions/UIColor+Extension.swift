@@ -24,4 +24,10 @@ extension UIColor {
         let (r, g, b, a) = rgba
         return (UInt8(255*r), UInt8(255*g), UInt8(255*b), UInt8(255*a))
     }
+
+
+    var mandelbrotPixel: Pixel {
+        let (r, g, b, _) = rgba
+        return Pixel(r: UInt8(255*r), g: UInt8(255*g), b: UInt8(255*b))
+    }
 }

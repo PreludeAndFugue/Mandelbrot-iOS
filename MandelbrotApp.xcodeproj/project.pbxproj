@@ -28,6 +28,7 @@
 		4E263B76214B06BD00D8D920 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */; };
 		4E263B78214B0EAA00D8D920 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */; };
 		4E263B7A214B128000D8D920 /* ColourMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B79214B128000D8D920 /* ColourMapFactory.swift */; };
+		4E5B37E9214DD0C30063B9AE /* SmoothTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B37E8214DD0C30063B9AE /* SmoothTest.swift */; };
 		4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */; };
 		4EA6B5F5214C72F700DA8964 /* PresentrShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */; };
 		4EA6B5F6214C72F700DA8964 /* ModalCenterPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E0214C72F600DA8964 /* ModalCenterPosition.swift */; };
@@ -78,6 +79,7 @@
 		4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		4E263B79214B128000D8D920 /* ColourMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapFactory.swift; sourceTree = "<group>"; };
+		4E5B37E8214DD0C30063B9AE /* SmoothTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTest.swift; sourceTree = "<group>"; };
 		4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCData.swift; sourceTree = "<group>"; };
 		4EA6B5DE214C72F600DA8964 /* Presentr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presentr.h; sourceTree = "<group>"; };
 		4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentrShadow.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				4E263B68214AFFCC00D8D920 /* SmoothScale.swift */,
 				4E263B6C214AFFCC00D8D920 /* YellowScale.swift */,
 				4E263B79214B128000D8D920 /* ColourMapFactory.swift */,
+				4E5B37E8214DD0C30063B9AE /* SmoothTest.swift */,
 			);
 			path = ColourMaps;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				4E263B61214AFFBE00D8D920 /* MandelbrotSet.swift in Sources */,
 				4E263B6E214AFFCC00D8D920 /* GreyScale.swift in Sources */,
 				4E263B63214AFFBE00D8D920 /* Transformation.swift in Sources */,
+				4E5B37E9214DD0C30063B9AE /* SmoothTest.swift in Sources */,
 				4EA6B604214C72F700DA8964 /* KeyboardTranslation.swift in Sources */,
 				4EA6B5FD214C72F700DA8964 /* CoverHorizontalAnimation.swift in Sources */,
 				4EA6B606214C72F700DA8964 /* Presentr+Equatable.swift in Sources */,

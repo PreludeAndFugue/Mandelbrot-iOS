@@ -45,6 +45,7 @@ struct MandelbrotSet {
 
     func image(with colourMap: ColourMapProtocol) -> UIImage {
         let pixels = grid.map({ colourMap.pixel(from: $0.test )})
+//        let sampledPixels = resample(pixels: pixels)
         return UIImage.from(pixels: pixels, width: imageSize.width, height: imageSize.height)
     }
 
@@ -90,5 +91,70 @@ private extension MandelbrotSet {
             (x, y) = (x*x - y*y + u, 2*x*y + v)
         }
         return .inSet
+    }
+}
+
+
+// MARK: - Private: average pixel colour
+
+private extension MandelbrotSet {
+    func resample(pixels: [Pixel]) -> [Pixel] {
+        var newPixels: [Pixel] = []
+        let width = config.imageWidth
+        let maxValue = config.imageWidth * config.imageHeight
+        for (i, pixel) in pixels.enumerated() {
+            if pixel.isBlack {
+                newPixels.append(pixel)
+                continue
+            }
+            var neighbours = getNeighbours(index: i, pixels: pixels, width: width, maxValue: maxValue)
+            neighbours.append(pixel)
+            let averagePixel = getAverage(pixels: neighbours)
+            newPixels.append(averagePixel)
+        }
+        return newPixels
+    }
+
+
+    func getNeighbours(index: Int, pixels: [Pixel], width: Int, maxValue: Int) -> [Pixel] {
+        var neighbours: [Pixel] = []
+        // Left
+        let left = index - 1
+        if index % width != 0 {
+            neighbours.append(pixels[left])
+        }
+        // Right
+        let right = index + 1
+        if right % width != 0 && right < maxValue {
+            neighbours.append(pixels[right])
+        }
+        // Top
+        let top = index - width
+        if top >= 0 {
+            neighbours.append(pixels[top])
+        }
+        // Bottom
+        let bottom = index + width
+        if bottom < maxValue {
+            neighbours.append(pixels[bottom])
+        }
+        return neighbours
+    }
+
+
+    func getAverage(pixels: [Pixel]) -> Pixel {
+        var r = 0
+        var g = 0
+        var b = 0
+        for pixel in pixels {
+            r += Int(pixel.r)
+            g += Int(pixel.g)
+            b += Int(pixel.b)
+        }
+        let count = Double(pixels.count)
+        let averageR = UInt8(Double(r)/count)
+        let averageG = UInt8(Double(g)/count)
+        let averageB = UInt8(Double(b)/count)
+        return Pixel(r: averageR, g: averageG, b: averageB)
     }
 }
