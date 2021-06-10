@@ -15,35 +15,35 @@ struct MainView: View {
         GeometryReader { proxy in
             ZStack {
                 ZStack(alignment: .topTrailing) {
-                   Image(uiImage: viewModel.image)
-                       .resizable()
-                       .background(Color.black)
-                       .ignoresSafeArea()
+                    Image(uiImage: viewModel.image)
+                        .resizable()
+                        .background(Color.black)
+                        .ignoresSafeArea()
 
-                   VStack(alignment: .trailing, spacing: 10) {
-                       Button(action: viewModel.reset) {
-                           Text("Reset")
-                               .padding(8)
-                       }
-                       .foregroundColor(.white)
-                       .background(Color.init(.displayP3, white: 1, opacity: 0.1))
-                       .cornerRadius(8)
+                    VStack(alignment: .trailing, spacing: 10) {
+                        Button(action: viewModel.reset) {
+                            Text("Reset")
+                                .padding(8)
+                        }
+                        .foregroundColor(.white)
+                        .background(Color.init(.displayP3, white: 1, opacity: 0.1))
+                        .cornerRadius(8)
 
-                       Button(action: viewModel.selectColourMap) {
-                           Text("Colour")
-                               .padding(8)
-                       }
-                       .foregroundColor(.white)
-                       .background(Color.init(.displayP3, white: 1, opacity: 0.05))
-                       .cornerRadius(8)
+                        Button(action: viewModel.selectColourMap) {
+                            Text("Colour")
+                                .padding(8)
+                        }
+                        .foregroundColor(.white)
+                        .background(Color.init(.displayP3, white: 1, opacity: 0.05))
+                        .cornerRadius(8)
 
-                       Button(action: viewModel.info) {
-                           Text("Info")
-                               .padding(8)
-                       }
-                       .foregroundColor(.white)
-                       .background(Color.init(.displayP3, white: 1, opacity: 0.05))
-                       .cornerRadius(8)
+                        Button(action: viewModel.info) {
+                            Text("Info")
+                                .padding(8)
+                        }
+                        .foregroundColor(.white)
+                        .background(Color.init(.displayP3, white: 1, opacity: 0.05))
+                        .cornerRadius(8)
                     }
                 }
 
