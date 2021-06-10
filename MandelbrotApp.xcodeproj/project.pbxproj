@@ -28,6 +28,9 @@
 		4E263B76214B06BD00D8D920 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */; };
 		4E263B78214B0EAA00D8D920 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */; };
 		4E263B7A214B128000D8D920 /* ColourMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B79214B128000D8D920 /* ColourMapFactory.swift */; };
+		4E32ECB42671853C005985AA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB32671853C005985AA /* MainView.swift */; };
+		4E32ECB626718986005985AA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB526718986005985AA /* MainViewModel.swift */; };
+		4E32ECB826718B13005985AA /* MandelbrotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB726718B13005985AA /* MandelbrotApp.swift */; };
 		4E5B37E9214DD0C30063B9AE /* SmoothTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B37E8214DD0C30063B9AE /* SmoothTest.swift */; };
 		4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */; };
 		4EA6B5F5214C72F700DA8964 /* PresentrShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */; };
@@ -79,6 +82,9 @@
 		4E263B75214B06BD00D8D920 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		4E263B79214B128000D8D920 /* ColourMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapFactory.swift; sourceTree = "<group>"; };
+		4E32ECB32671853C005985AA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4E32ECB526718986005985AA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		4E32ECB726718B13005985AA /* MandelbrotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandelbrotApp.swift; sourceTree = "<group>"; };
 		4E5B37E8214DD0C30063B9AE /* SmoothTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTest.swift; sourceTree = "<group>"; };
 		4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCData.swift; sourceTree = "<group>"; };
 		4EA6B5DE214C72F600DA8964 /* Presentr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presentr.h; sourceTree = "<group>"; };
@@ -140,9 +146,11 @@
 				4E263B59214AFFAB00D8D920 /* ColourMaps */,
 				4E263B72214B026800D8D920 /* Extensions */,
 				4E263B58214AFFA400D8D920 /* Model */,
+				4E32ECB226718529005985AA /* Views */,
 				4EA6B5DB214C72AD00DA8964 /* ViewControllers */,
 				4EA6B5DC214C72C700DA8964 /* Vendor */,
 				4E263B46214AFB3000D8D920 /* AppDelegate.swift */,
+				4E32ECB726718B13005985AA /* MandelbrotApp.swift */,
 				4E263B4A214AFB3000D8D920 /* Main.storyboard */,
 				4E263B4D214AFB3100D8D920 /* Assets.xcassets */,
 				4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */,
@@ -187,6 +195,15 @@
 				4E263B77214B0EAA00D8D920 /* CGPoint+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4E32ECB226718529005985AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E32ECB32671853C005985AA /* MainView.swift */,
+				4E32ECB526718986005985AA /* MainViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4EA6B5DB214C72AD00DA8964 /* ViewControllers */ = {
@@ -264,7 +281,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Gary Kerr";
 				TargetAttributes = {
 					4E263B42214AFB3000D8D920 = {
@@ -329,7 +346,9 @@
 				4EA6B5F9214C72F700DA8964 /* PresentationType.swift in Sources */,
 				4E263B76214B06BD00D8D920 /* UIColor+Extension.swift in Sources */,
 				4EA6B5F8214C72F700DA8964 /* Presentr.swift in Sources */,
+				4E32ECB42671853C005985AA /* MainView.swift in Sources */,
 				4EA6B600214C72F700DA8964 /* AlertViewController.swift in Sources */,
+				4E32ECB826718B13005985AA /* MandelbrotApp.swift in Sources */,
 				4E263B67214AFFBE00D8D920 /* ComplexNumber.swift in Sources */,
 				4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */,
 				4E263B78214B0EAA00D8D920 /* CGPoint+Extension.swift in Sources */,
@@ -346,6 +365,7 @@
 				4EA6B5FD214C72F700DA8964 /* CoverHorizontalAnimation.swift in Sources */,
 				4EA6B606214C72F700DA8964 /* Presentr+Equatable.swift in Sources */,
 				4E263B64214AFFBE00D8D920 /* MandelbrotSetPoint.swift in Sources */,
+				4E32ECB626718986005985AA /* MainViewModel.swift in Sources */,
 				4EA6B5F7214C72F700DA8964 /* CrossDissolveAnimation.swift in Sources */,
 				4E263B7A214B128000D8D920 /* ColourMapFactory.swift in Sources */,
 				4E263B70214AFFCC00D8D920 /* ManyColourGradient.swift in Sources */,
@@ -403,6 +423,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -428,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -464,6 +485,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -483,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -500,7 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T59AZ797LW;
 				INFOPLIST_FILE = MandelbrotApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,7 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T59AZ797LW;
 				INFOPLIST_FILE = MandelbrotApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

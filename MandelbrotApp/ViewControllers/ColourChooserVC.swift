@@ -10,7 +10,7 @@ import UIKit
 
 typealias ColourChooserPresenter = UIViewController & ColourChooserVCDelegate
 
-protocol ColourChooserVCDelegate: class {
+protocol ColourChooserVCDelegate: AnyObject {
     func didSelect(_ vc: ColourChooserVC, index: Int)
 }
 

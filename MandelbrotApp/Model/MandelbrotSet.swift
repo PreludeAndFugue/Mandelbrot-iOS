@@ -38,7 +38,9 @@ struct MandelbrotSet {
             }
 
             let completedUnitCount = Int64(Double(i)*countFraction)
-            progress.completedUnitCount = completedUnitCount
+            DispatchQueue.main.async {
+                progress.completedUnitCount = completedUnitCount
+            }
         }
     }
 
