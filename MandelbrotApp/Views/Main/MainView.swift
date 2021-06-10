@@ -19,6 +19,7 @@ struct MainView: View {
                         .resizable()
                         .background(Color.black)
                         .ignoresSafeArea()
+                        .gesture(makeGesture())
 
                     VStack(alignment: .trailing, spacing: 10) {
                         Button(action: viewModel.reset) {
@@ -62,8 +63,24 @@ struct MainView: View {
     }
 }
 
+
+// MARK: - Private
+
+private extension MainView {
+    func makeGesture() -> _ChangedGesture<DragGesture> {
+        DragGesture(minimumDistance: 0, coordinateSpace: .local)
+            .onChanged() { value in
+                print(value.location)
+                viewModel.zoomIn(at: value.location)
+            }
+    }
+}
+
+
+#if DEBUG
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
     }
 }
+#endif

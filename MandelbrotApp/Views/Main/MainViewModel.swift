@@ -62,10 +62,30 @@ class MainViewModel: ObservableObject {
     }
 
 
+    func zoomIn(at point: CGPoint) {
+        if isInProgress { return }
+        let centre = newCentre(from: point)
+        config = config.zoomIn(centre: centre)
+        generate()
+    }
+
+
     func onAppear(size: CGSize) {
         width = Int(size.width)
         height = Int(size.height)
         config = MandelbrotSetConfig(imageWidth: width, imageHeight: height)
         generate()
+    }
+}
+
+
+// MARK: - Private
+
+private extension MainViewModel {
+    func newCentre(from point: CGPoint) -> ComplexNumber {
+        let imageRect = Rectangle(xMin: 0, yMin: 0, xMax: config.imageWidth, yMax: config.imageHeight)
+        let complexRect = Rectangle(config: config)
+        let transform = Transformation(from: imageRect, to: complexRect)
+        return transform.transform(point: point)
     }
 }
