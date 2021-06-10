@@ -10,16 +10,20 @@ import CoreGraphics
 
 
 protocol ColourMapProtocol {
-
     typealias RGB = (r: UInt8, g: UInt8, b: UInt8)
 
+    var id: String { get }
     var title: String { get }
     var blackPixel: Pixel { get }
     var pixels: [Pixel] { get }
     func pixel(from test: MandelbrotSetPoint.Test) -> Pixel
 }
 
+
 extension ColourMapProtocol {
+    var id: String { title }
+
+    
     func pixel(from test: MandelbrotSetPoint.Test) -> Pixel {
         switch test {
         case .inSet:

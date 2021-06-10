@@ -26,10 +26,10 @@ struct MainView: View {
                                .padding(8)
                        }
                        .foregroundColor(.white)
-                       .background(Color.init(.displayP3, white: 1, opacity: 0.05))
+                       .background(Color.init(.displayP3, white: 1, opacity: 0.1))
                        .cornerRadius(8)
 
-                       Button(action: viewModel.colour) {
+                       Button(action: viewModel.selectColourMap) {
                            Text("Colour")
                                .padding(8)
                        }
@@ -53,6 +53,9 @@ struct MainView: View {
             }
             .onAppear {
                 viewModel.onAppear(size: proxy.size)
+            }
+            .sheet(isPresented: $viewModel.isSelectingColourMap, onDismiss: viewModel.updateColourMap) {
+                ColourMapsView(current: $viewModel.colourMap)
             }
         }
     }

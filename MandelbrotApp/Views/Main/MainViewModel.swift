@@ -15,25 +15,27 @@ class MainViewModel: ObservableObject {
     private var width = 0
     private var height = 0
     private let colourMaps = ColourMapFactory.maps
-    private var colourMap = ColourMapFactory.maps[0]
     private var config = MandelbrotSetConfig(imageWidth: 0, imageHeight: 0)
     private var mandelbrotSet: MandelbrotSet!
+
+    var colourMap = ColourMapFactory.maps[0]
 
     @Published var loadingProgress = 0.0
     @Published var progress = Progress(totalUnitCount: 100)
     @Published var isInProgress = false
+    @Published var isSelectingColourMap = false
     @Published var image = UIImage()
 
 
     func reset() {
         config = MandelbrotSetConfig(imageWidth: width, imageHeight: height)
-        colourMap = colourMaps[1]
+        colourMap = colourMaps[0]
         generate()
     }
 
 
-    func colour() {
-        print("colour")
+    func selectColourMap() {
+        isSelectingColourMap.toggle()
     }
 
 
@@ -52,6 +54,11 @@ class MainViewModel: ObservableObject {
                 self.isInProgress = false
             }
         }
+    }
+
+
+    func updateColourMap() {
+        image = mandelbrotSet.image(with: colourMap)
     }
 
 

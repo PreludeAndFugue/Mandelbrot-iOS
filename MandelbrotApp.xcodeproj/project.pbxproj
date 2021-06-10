@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1F663B2672BB420033DE8A /* ColourMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F663A2672BB420033DE8A /* ColourMapsView.swift */; };
 		4E263B47214AFB3000D8D920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B46214AFB3000D8D920 /* AppDelegate.swift */; };
 		4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B48214AFB3000D8D920 /* MainVC.swift */; };
 		4E263B4C214AFB3000D8D920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4A214AFB3000D8D920 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E1F663A2672BB420033DE8A /* ColourMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapsView.swift; sourceTree = "<group>"; };
 		4E263B43214AFB3000D8D920 /* MandelbrotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandelbrotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E263B46214AFB3000D8D920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E263B48214AFB3000D8D920 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -124,6 +126,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1F66382672BB2A0033DE8A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4E32ECB32671853C005985AA /* MainView.swift */,
+				4E32ECB526718986005985AA /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4E1F66392672BB340033DE8A /* ColourMaps */ = {
+			isa = PBXGroup;
+			children = (
+				4E1F663A2672BB420033DE8A /* ColourMapsView.swift */,
+			);
+			path = ColourMaps;
+			sourceTree = "<group>";
+		};
 		4E263B3A214AFB3000D8D920 = {
 			isa = PBXGroup;
 			children = (
@@ -200,8 +219,8 @@
 		4E32ECB226718529005985AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4E32ECB32671853C005985AA /* MainView.swift */,
-				4E32ECB526718986005985AA /* MainViewModel.swift */,
+				4E1F66392672BB340033DE8A /* ColourMaps */,
+				4E1F66382672BB2A0033DE8A /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +355,7 @@
 				4E263B66214AFFBE00D8D920 /* Pixel.swift in Sources */,
 				4EA6B5F6214C72F700DA8964 /* ModalCenterPosition.swift in Sources */,
 				4EA6B5FA214C72F700DA8964 /* PresentrController.swift in Sources */,
+				4E1F663B2672BB420033DE8A /* ColourMapsView.swift in Sources */,
 				4EA6B5FC214C72F700DA8964 /* CoverVerticalFromTopAnimation.swift in Sources */,
 				4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */,
 				4EA6B5FB214C72F700DA8964 /* CoverFromCornerAnimation.swift in Sources */,
