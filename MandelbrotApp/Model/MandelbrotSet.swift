@@ -6,15 +6,20 @@
 //  Copyright © 2017 Gary Kerr. All rights reserved.
 //
 
-// Notes for improvements
-//
-// https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/Mandelbrot_set#Real_Escape_Time
-// http://www.mrob.com/pub/muency/speedimprovements.html
-//
-
 import Foundation
 import UIKit
 
+/// Mandelbrot set calculation
+///
+/// Links for improvements
+/// ----------------------
+///
+/// https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/Mandelbrot_set#Real_Escape_Time
+///
+/// http://www.mrob.com/pub/muency/speedimprovements.html
+///
+/// https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set
+///
 struct MandelbrotSet {
 
     let config: MandelbrotSetConfig
