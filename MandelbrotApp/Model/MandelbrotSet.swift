@@ -33,20 +33,29 @@ struct MandelbrotSet {
         let ys = Array(stride(from: config.yMin, to: config.yMax, by: config.dy))
         let xs = Array(stride(from: config.xMin, to: config.xMax, by: config.dx))
         imageSize = (xs.count, ys.count)
+        grid.reserveCapacity(xs.count * ys.count)
 
-        let countFraction = Double(100) / Double(imageSize.height)
+        let progressHelper = ProgressHelper(steps: imageSize.height, progress: progress)
+        let timerHelper = TimerHelper()
 
         for (i, y) in ys.enumerated() {
             for x in xs {
                 let z = ComplexNumber(x: x, y: y)
-                grid.append(MandelbrotSetPoint(point: z, test: isInSetFast(point: z)))
-            }
 
-            let completedUnitCount = Int64(Double(i)*countFraction)
-            DispatchQueue.main.async {
-                progress.completedUnitCount = completedUnitCount
+                if inCardiod(x: x, y: y) {
+                    let result = MandelbrotSetPoint(point: z, test: .inSet)
+                    grid.append(result)
+                    continue
+                }
+
+//                let result = MandelbrotSetPoint(point: z, test: isInSetFast(point: z))
+//                let result = MandelbrotSetPoint(point: z, test: isInSetFast1(point: z))
+                let result = MandelbrotSetPoint(point: z, test: isInSetFast1a(x0: x, y0: y))
+                grid.append(result)
             }
+            progressHelper.update(step: i)
         }
+        timerHelper.end()
     }
 
 
@@ -72,7 +81,7 @@ struct MandelbrotSet {
 }
 
 
-// MARK: - Private
+// MARK: - Is in set tests
 
 private extension MandelbrotSet {
     func isInSet(point: ComplexNumber) -> MandelbrotSetPoint.Test {
@@ -98,6 +107,92 @@ private extension MandelbrotSet {
             (x, y) = (x*x - y*y + u, 2*x*y + v)
         }
         return .inSet
+    }
+
+
+
+    /// Calculates `MandelbrotSetPoint.Test` for a complex number
+    ///
+    /// https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#Optimized_escape_time_algorithms
+    ///
+    /// - Parameter point: The complex number
+    /// - Returns: The result
+    func isInSetFast1(point: ComplexNumber) -> MandelbrotSetPoint.Test {
+        let x0 = point.x
+        let y0 = point.y
+        var x = 0.0
+        var y = 0.0
+        var x2 = 0.0
+        var y2 = 0.0
+        var w = 0.0
+        for i in 0..<config.iterations {
+            if x2 + y2 > 4 {
+                let z_i = ComplexNumber(x: x, y: y)
+                return .notInSet(iterations: i, finalPoint: z_i)
+            }
+            x = x2 - y2 + x0
+            y = w - x2 - y2 + y0
+            x2 = x * x
+            y2 = y * y
+            w = (x + y) * (x + y)
+        }
+        return .inSet
+    }
+
+
+    /// Calculates `MandelbrotSetPoint.Test` for a complex number
+    ///
+    /// https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set#Optimized_escape_time_algorithms
+    ///
+    /// - Parameter point: The complex number
+    /// - Returns: The result
+    func isInSetFast1a(x0: Double, y0: Double) -> MandelbrotSetPoint.Test {
+        var x = 0.0
+        var y = 0.0
+        var x2 = 0.0
+        var y2 = 0.0
+        for i in 0..<config.iterations {
+            if x2 + y2 > 4 {
+                let z_i = ComplexNumber(x: x, y: y)
+                return .notInSet(iterations: i, finalPoint: z_i)
+            }
+            y = 2 * x * y + y0
+            x = x2 - y2 + x0
+            x2 = x * x
+            y2 = y * y
+        }
+        return .inSet
+    }
+}
+
+
+// MARK: - Cardiod checks
+
+private extension MandelbrotSet {
+    /// Is a point in the main Mandelbrot bulbs?
+    ///
+    /// Main cardioid
+    /// https://www.reenigne.org/blog/algorithm-for-mandelbrot-cardioid/
+    ///
+    ///     |c|^2 (8|c|^2 - 3) + Re(c) <= 3/32
+    ///
+    /// First bulb:
+    ///
+    ///     (x + 1)^2 + y^2 <= 1/16
+    ///
+    func inCardiod(x: Double, y: Double) -> Bool {
+        // main cardioid check
+        let x2 = x * x
+        let y2 = y * y
+        let xy2 = x2 + y2
+        if xy2 * (8 * xy2 - 3) + x <= 0.09375 {
+            return true
+        }
+
+        // bulb at c = -1, with radius 1/4
+//        let x1_2 = (x + 1) * (x + 1)
+//        return x1_2 + y2 < 0.015625
+        return xy2 + 2*x + 1 <= 0.015625
     }
 }
 

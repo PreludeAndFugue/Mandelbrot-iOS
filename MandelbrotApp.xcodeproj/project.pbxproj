@@ -57,6 +57,8 @@
 		4EA6B60A214C72F700DA8964 /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5F4214C72F700DA8964 /* TransitionType.swift */; };
 		4EA6B60C214C761700DA8964 /* ColourChooserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B60B214C761700DA8964 /* ColourChooserVC.swift */; };
 		4EC2FEC2214C8F5C00DEEDC4 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2FEC1214C8F5C00DEEDC4 /* InfoVC.swift */; };
+		4EF927212676717B00C8B378 /* ProgressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF927202676717B00C8B378 /* ProgressHelper.swift */; };
+		4EF92723267672CA00C8B378 /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF92722267672CA00C8B378 /* TimerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +115,8 @@
 		4EA6B5F4214C72F700DA8964 /* TransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
 		4EA6B60B214C761700DA8964 /* ColourChooserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourChooserVC.swift; sourceTree = "<group>"; };
 		4EC2FEC1214C8F5C00DEEDC4 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		4EF927202676717B00C8B378 /* ProgressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHelper.swift; sourceTree = "<group>"; };
+		4EF92722267672CA00C8B378 /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 				4E263B5F214AFFBE00D8D920 /* Pixel.swift */,
 				4E263B5E214AFFBE00D8D920 /* Rectangle.swift */,
 				4E263B5C214AFFBE00D8D920 /* Transformation.swift */,
+				4EF927202676717B00C8B378 /* ProgressHelper.swift */,
+				4EF92722267672CA00C8B378 /* TimerHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				4EA6B5FB214C72F700DA8964 /* CoverFromCornerAnimation.swift in Sources */,
 				4EA6B60A214C72F700DA8964 /* TransitionType.swift in Sources */,
 				4E263B6F214AFFCC00D8D920 /* ColourMapProtocol.swift in Sources */,
+				4EF927212676717B00C8B378 /* ProgressHelper.swift in Sources */,
 				4EA6B60C214C761700DA8964 /* ColourChooserVC.swift in Sources */,
 				4EA6B602214C72F700DA8964 /* BackgroundView.swift in Sources */,
 				4EA6B5F9214C72F700DA8964 /* PresentationType.swift in Sources */,
@@ -368,6 +375,7 @@
 				4EA6B5F8214C72F700DA8964 /* Presentr.swift in Sources */,
 				4E32ECB42671853C005985AA /* MainView.swift in Sources */,
 				4EA6B600214C72F700DA8964 /* AlertViewController.swift in Sources */,
+				4EF92723267672CA00C8B378 /* TimerHelper.swift in Sources */,
 				4E32ECB826718B13005985AA /* MandelbrotApp.swift in Sources */,
 				4E263B67214AFFBE00D8D920 /* ComplexNumber.swift in Sources */,
 				4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */,
