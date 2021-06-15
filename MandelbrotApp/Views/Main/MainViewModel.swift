@@ -11,6 +11,8 @@ import CoreGraphics
 import Foundation
 import UIKit
 
+import MandelbrotEngine
+
 class MainViewModel: ObservableObject {
     private var width = 0
     private var height = 0
@@ -50,7 +52,7 @@ class MainViewModel: ObservableObject {
         DispatchQueue.global().async {
             self.mandelbrotSet = MandelbrotSet(config: self.config, progress: self.progress)
             DispatchQueue.main.async {
-                self.image = self.mandelbrotSet.image(with: self.colourMap)
+                self.image = UIImage.from(mandelbrotSet: self.mandelbrotSet, colourMap: self.colourMap)
                 self.isInProgress = false
             }
         }
@@ -58,7 +60,7 @@ class MainViewModel: ObservableObject {
 
 
     func updateColourMap() {
-        image = mandelbrotSet.image(with: colourMap)
+        image = UIImage.from(mandelbrotSet: mandelbrotSet, colourMap: colourMap)
     }
 
 

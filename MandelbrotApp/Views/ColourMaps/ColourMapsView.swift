@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+import MandelbrotEngine
+
 struct ColourMapsView: View {
     @Environment(\.presentationMode) var presentationMode
 

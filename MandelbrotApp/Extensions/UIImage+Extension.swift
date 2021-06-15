@@ -8,6 +8,8 @@
 
 import UIKit
 
+import MandelbrotEngine
+
 extension UIImage {
 
     // http://blog.human-friendly.com/drawing-images-from-pixel-data-in-swift
@@ -44,6 +46,16 @@ extension UIImage {
         ) else { fatalError("Couldn't create CGImage") }
 
         return UIImage(cgImage: image)
+    }
+
+
+    static func from(mandelbrotSet: MandelbrotSet, colourMap: ColourMapProtocol) -> UIImage {
+        let pixels = mandelbrotSet.grid.map({ colourMap.pixel(from: $0.test) })
+        return from(
+            pixels: pixels,
+            width: mandelbrotSet.imageSize.width,
+            height: mandelbrotSet.imageSize.height
+        )
     }
 
 

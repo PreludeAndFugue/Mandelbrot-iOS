@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+import MandelbrotEngine
+
 final class MainVCData {
     private let width: Int
     private let height: Int
@@ -48,7 +50,7 @@ final class MainVCData {
     func makeImage(progress: Progress, completion: @escaping (UIImage) -> ()) {
         DispatchQueue.global().async {
             self.mandelbrotSet = MandelbrotSet(config: self.config, progress: progress)
-            let image = self.mandelbrotSet!.image(with: self.colourMap)
+            let image = UIImage.from(mandelbrotSet: self.mandelbrotSet, colourMap: self.colourMap)
             DispatchQueue.main.async {
                 completion(image)
             }
@@ -63,7 +65,7 @@ final class MainVCData {
 
 
     func recolourImage() -> UIImage {
-        return mandelbrotSet!.image(with: colourMap)
+        UIImage.from(mandelbrotSet: mandelbrotSet, colourMap: colourMap)
     }
 }
 

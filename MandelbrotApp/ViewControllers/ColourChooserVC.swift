@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MandelbrotEngine
 
 typealias ColourChooserPresenter = UIViewController & ColourChooserVCDelegate
 
