@@ -22,6 +22,12 @@ struct ColourMapsView: View {
             List(maps, id: \.id) { map in
                 Button(action: { select(map: map) }) {
                     HStack {
+                        Image(uiImage: image(for: map))
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                            .cornerRadius(8)
+                        
                         Text(map.title)
 
                         Spacer()
@@ -42,6 +48,15 @@ struct ColourMapsView: View {
     private func select(map: ColourMapProtocol) {
         current = map
         presentationMode.wrappedValue.dismiss()
+    }
+
+
+    private func image(for map: ColourMapProtocol) -> UIImage {
+        if map.preview.isEmpty {
+            return UIImage(systemName: "questionmark.circle")!
+        } else {
+            return UIImage.from(pixels: map.preview)
+        }
     }
 }
 

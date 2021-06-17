@@ -49,6 +49,12 @@ extension UIImage {
     }
 
 
+    static func from(pixels: [Pixel]) -> UIImage {
+        let width = Int(sqrt(Double(pixels.count)))
+        return from(pixels: pixels, width: width, height: width)
+    }
+
+
     static func from(mandelbrotSet: MandelbrotSet, colourMap: ColourMapProtocol) -> UIImage {
         let pixels = mandelbrotSet.grid.map({ colourMap.pixel(from: $0.test) })
         return from(
