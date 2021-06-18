@@ -27,7 +27,7 @@ struct MainView: View {
                                 .padding(8)
                         }
                         .foregroundColor(.white)
-                        .background(Color.init(.displayP3, white: 1, opacity: 0.1))
+                        .background(Color(.displayP3, white: 0, opacity: 0.2))
                         .cornerRadius(8)
 
                         Button(action: viewModel.selectColourMap) {
@@ -35,7 +35,7 @@ struct MainView: View {
                                 .padding(8)
                         }
                         .foregroundColor(.white)
-                        .background(Color.init(.displayP3, white: 1, opacity: 0.05))
+                        .background(Color(.displayP3, white: 0, opacity: 0.2))
                         .cornerRadius(8)
 
                         Button(action: viewModel.info) {
@@ -43,10 +43,13 @@ struct MainView: View {
                                 .padding(8)
                         }
                         .foregroundColor(.white)
-                        .background(Color.init(.displayP3, white: 1, opacity: 0.05))
+                        .background(Color(.displayP3, white: 0, opacity: 0.2))
                         .cornerRadius(8)
                     }
-                    .padding(.top)
+                    .padding(4)
+                    .background(Color(.displayP3, white: 0, opacity: 0.1))
+                    .cornerRadius(9)
+                    .padding(.top, 4)
                 }
 
                 ProgressView(viewModel.progress)
