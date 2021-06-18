@@ -19,6 +19,7 @@
 		4E32ECB826718B13005985AA /* MandelbrotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB726718B13005985AA /* MandelbrotApp.swift */; };
 		4EA4BB0A267D40260059790A /* ColourMapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */; };
 		4EA4BB0C267D47D90059790A /* ColourMapButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */; };
+		4EA4BB0E267D52440059790A /* MyProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */; };
 		4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */; };
 		4EA6B5F5214C72F700DA8964 /* PresentrShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */; };
 		4EA6B5F6214C72F700DA8964 /* ModalCenterPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E0214C72F600DA8964 /* ModalCenterPosition.swift */; };
@@ -61,6 +62,7 @@
 		4E32ECB726718B13005985AA /* MandelbrotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandelbrotApp.swift; sourceTree = "<group>"; };
 		4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapsViewModel.swift; sourceTree = "<group>"; };
 		4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapButtonView.swift; sourceTree = "<group>"; };
+		4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressViewStyle.swift; sourceTree = "<group>"; };
 		4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCData.swift; sourceTree = "<group>"; };
 		4EA6B5DE214C72F600DA8964 /* Presentr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presentr.h; sourceTree = "<group>"; };
 		4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentrShadow.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				4E1F66392672BB340033DE8A /* ColourMaps */,
 				4E1F66382672BB2A0033DE8A /* Main */,
+				4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				4E263B47214AFB3000D8D920 /* AppDelegate.swift in Sources */,
 				4EA6B607214C72F700DA8964 /* PresentrAnimation.swift in Sources */,
 				4EA6B601214C72F700DA8964 /* ModalSize.swift in Sources */,
+				4EA4BB0E267D52440059790A /* MyProgressViewStyle.swift in Sources */,
 				4EA6B5F5214C72F700DA8964 /* PresentrShadow.swift in Sources */,
 				4EA6B604214C72F700DA8964 /* KeyboardTranslation.swift in Sources */,
 				4EA6B5FD214C72F700DA8964 /* CoverHorizontalAnimation.swift in Sources */,
@@ -476,7 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = T59AZ797LW;
 				INFOPLIST_FILE = MandelbrotApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -496,7 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = T59AZ797LW;
 				INFOPLIST_FILE = MandelbrotApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
