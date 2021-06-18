@@ -17,6 +17,8 @@
 		4E32ECB42671853C005985AA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB32671853C005985AA /* MainView.swift */; };
 		4E32ECB626718986005985AA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB526718986005985AA /* MainViewModel.swift */; };
 		4E32ECB826718B13005985AA /* MandelbrotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB726718B13005985AA /* MandelbrotApp.swift */; };
+		4EA4BB0A267D40260059790A /* ColourMapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */; };
+		4EA4BB0C267D47D90059790A /* ColourMapButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */; };
 		4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */; };
 		4EA6B5F5214C72F700DA8964 /* PresentrShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */; };
 		4EA6B5F6214C72F700DA8964 /* ModalCenterPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E0214C72F600DA8964 /* ModalCenterPosition.swift */; };
@@ -57,6 +59,8 @@
 		4E32ECB32671853C005985AA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4E32ECB526718986005985AA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4E32ECB726718B13005985AA /* MandelbrotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandelbrotApp.swift; sourceTree = "<group>"; };
+		4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapsViewModel.swift; sourceTree = "<group>"; };
+		4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapButtonView.swift; sourceTree = "<group>"; };
 		4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCData.swift; sourceTree = "<group>"; };
 		4EA6B5DE214C72F600DA8964 /* Presentr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presentr.h; sourceTree = "<group>"; };
 		4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentrShadow.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				4E1F663A2672BB420033DE8A /* ColourMapsView.swift */,
+				4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */,
+				4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */,
 			);
 			path = ColourMaps;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				4EA6B60C214C761700DA8964 /* ColourChooserVC.swift in Sources */,
 				4EA6B602214C72F700DA8964 /* BackgroundView.swift in Sources */,
 				4EA6B5F9214C72F700DA8964 /* PresentationType.swift in Sources */,
+				4EA4BB0A267D40260059790A /* ColourMapsViewModel.swift in Sources */,
 				4EA6B5F8214C72F700DA8964 /* Presentr.swift in Sources */,
 				4E32ECB42671853C005985AA /* MainView.swift in Sources */,
 				4EA6B600214C72F700DA8964 /* AlertViewController.swift in Sources */,
@@ -318,6 +325,7 @@
 				4EA6B606214C72F700DA8964 /* Presentr+Equatable.swift in Sources */,
 				4E32ECB626718986005985AA /* MainViewModel.swift in Sources */,
 				4EA6B5F7214C72F700DA8964 /* CrossDissolveAnimation.swift in Sources */,
+				4EA4BB0C267D47D90059790A /* ColourMapButtonView.swift in Sources */,
 				4EC2FEC2214C8F5C00DEEDC4 /* InfoVC.swift in Sources */,
 				4EA6B5FF214C72F700DA8964 /* CoverVerticalAnimation.swift in Sources */,
 			);
