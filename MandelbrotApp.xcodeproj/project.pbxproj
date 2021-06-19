@@ -63,6 +63,7 @@
 		4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapsViewModel.swift; sourceTree = "<group>"; };
 		4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapButtonView.swift; sourceTree = "<group>"; };
 		4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressViewStyle.swift; sourceTree = "<group>"; };
+		4EA4BB0F267D69CE0059790A /* MandelbrotApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MandelbrotApp.entitlements; sourceTree = "<group>"; };
 		4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCData.swift; sourceTree = "<group>"; };
 		4EA6B5DE214C72F600DA8964 /* Presentr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presentr.h; sourceTree = "<group>"; };
 		4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentrShadow.swift; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		4E263B45214AFB3000D8D920 /* MandelbrotApp */ = {
 			isa = PBXGroup;
 			children = (
+				4EA4BB0F267D69CE0059790A /* MandelbrotApp.entitlements */,
 				4E263B72214B026800D8D920 /* Extensions */,
 				4E32ECB226718529005985AA /* Views */,
 				4EA6B5DB214C72AD00DA8964 /* ViewControllers */,
@@ -479,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MandelbrotApp/MandelbrotApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = T59AZ797LW;
@@ -490,6 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.MandelbrotApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -499,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MandelbrotApp/MandelbrotApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = T59AZ797LW;
@@ -510,6 +515,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.MandelbrotApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

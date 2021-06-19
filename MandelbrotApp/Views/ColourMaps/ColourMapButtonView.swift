@@ -21,14 +21,14 @@ struct ColourMapButtonView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
-                    .cornerRadius(8)
 
                 Text(map.title)
                     .font(.caption)
                     .padding(4)
                     .frame(maxWidth: .infinity)
-                    .background(Color.init(.displayP3, white: 1, opacity: 0.4))
+                    .background(Color("ColourMapNameBackground"))
             }
+            .cornerRadius(8)
         }
         .buttonStyle(PlainButtonStyle())
     }
@@ -47,7 +47,13 @@ struct ColourMapButtonView: View {
 #if DEBUG
 struct ColourMapButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ColourMapButtonView(map: ColourMapFactory.maps[0], action: { _ in })
+        Group {
+            ColourMapButtonView(map: ColourMapFactory.maps[0], action: { _ in })
+                .previewLayout(.fixed(width: 100, height: 100))
+            ColourMapButtonView(map: ColourMapFactory.maps[0], action: { _ in })
+                .preferredColorScheme(.dark)
+                .previewLayout(.fixed(width: 100, height: 100))
+        }
     }
 }
 #endif
