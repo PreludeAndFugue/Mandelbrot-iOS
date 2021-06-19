@@ -48,9 +48,9 @@ struct ColourMapButtonView: View {
 struct ColourMapButtonView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ColourMapButtonView(map: ColourMapFactory.maps[0], action: { _ in })
+            ColourMapButtonView(map: ColourMapFactory.maps[2], action: { _ in })
                 .previewLayout(.fixed(width: 100, height: 100))
-            ColourMapButtonView(map: ColourMapFactory.maps[0], action: { _ in })
+            ColourMapButtonView(map: ColourMapFactory.maps[2], action: { _ in })
                 .preferredColorScheme(.dark)
                 .previewLayout(.fixed(width: 100, height: 100))
         }
