@@ -17,6 +17,7 @@ struct MainView: View {
                 ZStack(alignment: .topTrailing) {
                     Image(uiImage: viewModel.image)
                         .resizable()
+                        .scaledToFill()
                         .background(Color.black)
                         .ignoresSafeArea()
                         .gesture(makeGesture())
