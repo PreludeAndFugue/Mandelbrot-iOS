@@ -34,7 +34,6 @@
 		4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapsViewModel.swift; sourceTree = "<group>"; };
 		4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapButtonView.swift; sourceTree = "<group>"; };
 		4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressViewStyle.swift; sourceTree = "<group>"; };
-		4EA4BB0F267D69CE0059790A /* MandelbrotApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MandelbrotApp.entitlements; sourceTree = "<group>"; };
 		4EF23CE826A4D6D3009F6B8E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +87,6 @@
 		4E263B45214AFB3000D8D920 /* MandelbrotApp */ = {
 			isa = PBXGroup;
 			children = (
-				4EA4BB0F267D69CE0059790A /* MandelbrotApp.entitlements */,
 				4E263B72214B026800D8D920 /* Extensions */,
 				4E32ECB226718529005985AA /* Views */,
 				4E32ECB726718B13005985AA /* MandelbrotApp.swift */,
