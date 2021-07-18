@@ -73,6 +73,7 @@ class MainViewModel: ObservableObject {
 
     func zoomIn(at point: CGPoint) {
         if isInProgress { return }
+
         let centre = newCentre(from: point)
         config = config.zoomIn(centre: centre)
         generate()
@@ -105,9 +106,10 @@ class MainViewModel: ObservableObject {
 
 private extension MainViewModel {
     func newCentre(from point: CGPoint) -> ComplexNumber {
+        let newPoint = CGPoint(x: 2 * point.x, y: 2 * point.y)
         let imageRect = Rectangle(xMin: 0, yMin: 0, xMax: config.imageWidth, yMax: config.imageHeight)
         let complexRect = Rectangle(config: config)
         let transform = Transformation(from: imageRect, to: complexRect)
-        return transform.transform(point: point)
+        return transform.transform(point: newPoint)
     }
 }
