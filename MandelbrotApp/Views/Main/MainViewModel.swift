@@ -50,7 +50,11 @@ class MainViewModel: ObservableObject {
         progress = Progress(totalUnitCount: 100)
         isInProgress = true
         DispatchQueue.global().async {
-            self.mandelbrotSet = MandelbrotSet(config: self.config, progress: self.progress)
+            self.mandelbrotSet = MandelbrotSet(
+                config: self.config,
+                progress: self.progress,
+                timer: self.timerAction(dt:)
+            )
             DispatchQueue.main.async {
                 self.image = UIImage.from(mandelbrotSet: self.mandelbrotSet, colourMap: self.colourMap)
                 self.isInProgress = false
@@ -73,10 +77,16 @@ class MainViewModel: ObservableObject {
 
 
     func onAppear(size: CGSize) {
+        print("on appear", size)
         width = Int(size.width)
         height = Int(size.height)
         config = MandelbrotSetConfig(imageWidth: width, imageHeight: height)
         generate()
+    }
+
+
+    func timerAction(dt: TimeInterval) {
+        print("time", dt)
     }
 }
 
