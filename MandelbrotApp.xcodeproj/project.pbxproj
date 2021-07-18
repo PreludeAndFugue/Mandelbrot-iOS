@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E1F663B2672BB420033DE8A /* ColourMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F663A2672BB420033DE8A /* ColourMapsView.swift */; };
-		4E263B47214AFB3000D8D920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B46214AFB3000D8D920 /* AppDelegate.swift */; };
 		4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B48214AFB3000D8D920 /* MainVC.swift */; };
-		4E263B4C214AFB3000D8D920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4A214AFB3000D8D920 /* Main.storyboard */; };
 		4E263B4E214AFB3100D8D920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4D214AFB3100D8D920 /* Assets.xcassets */; };
 		4E263B51214AFB3100D8D920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */; };
 		4E263B74214B027300D8D920 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B73214B027300D8D920 /* UIImage+Extension.swift */; };
@@ -50,9 +48,7 @@
 /* Begin PBXFileReference section */
 		4E1F663A2672BB420033DE8A /* ColourMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapsView.swift; sourceTree = "<group>"; };
 		4E263B43214AFB3000D8D920 /* MandelbrotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandelbrotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E263B46214AFB3000D8D920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E263B48214AFB3000D8D920 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		4E263B4B214AFB3000D8D920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E263B4D214AFB3100D8D920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E263B50214AFB3100D8D920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E263B52214AFB3100D8D920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,9 +142,7 @@
 				4E32ECB226718529005985AA /* Views */,
 				4EA6B5DB214C72AD00DA8964 /* ViewControllers */,
 				4EA6B5DC214C72C700DA8964 /* Vendor */,
-				4E263B46214AFB3000D8D920 /* AppDelegate.swift */,
 				4E32ECB726718B13005985AA /* MandelbrotApp.swift */,
-				4E263B4A214AFB3000D8D920 /* Main.storyboard */,
 				4E263B4D214AFB3100D8D920 /* Assets.xcassets */,
 				4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */,
 				4E263B52214AFB3100D8D920 /* Info.plist */,
@@ -291,7 +285,6 @@
 				4E263B51214AFB3100D8D920 /* LaunchScreen.storyboard in Resources */,
 				4E263B4E214AFB3100D8D920 /* Assets.xcassets in Resources */,
 				4EA6B609214C72F700DA8964 /* SourceSansPro-Regular.ttf in Resources */,
-				4E263B4C214AFB3000D8D920 /* Main.storyboard in Resources */,
 				4EA6B5FE214C72F700DA8964 /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +314,6 @@
 				4EA6B600214C72F700DA8964 /* AlertViewController.swift in Sources */,
 				4E32ECB826718B13005985AA /* MandelbrotApp.swift in Sources */,
 				4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */,
-				4E263B47214AFB3000D8D920 /* AppDelegate.swift in Sources */,
 				4EA6B607214C72F700DA8964 /* PresentrAnimation.swift in Sources */,
 				4EA6B601214C72F700DA8964 /* ModalSize.swift in Sources */,
 				4EA4BB0E267D52440059790A /* MyProgressViewStyle.swift in Sources */,
@@ -340,14 +332,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4E263B4A214AFB3000D8D920 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E263B4B214AFB3000D8D920 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
