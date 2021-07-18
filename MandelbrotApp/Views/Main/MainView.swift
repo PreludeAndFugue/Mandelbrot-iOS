@@ -21,35 +21,7 @@ struct MainView: View {
                         .ignoresSafeArea()
                         .gesture(makeGesture())
 
-                    VStack(alignment: .trailing, spacing: 10) {
-                        Button(action: viewModel.reset) {
-                            Text("Reset")
-                                .padding(8)
-                        }
-                        .foregroundColor(.white)
-                        .background(Color(.displayP3, white: 0, opacity: 0.2))
-                        .cornerRadius(8)
-
-                        Button(action: viewModel.selectColourMap) {
-                            Text("Colour")
-                                .padding(8)
-                        }
-                        .foregroundColor(.white)
-                        .background(Color(.displayP3, white: 0, opacity: 0.2))
-                        .cornerRadius(8)
-
-                        Button(action: viewModel.info) {
-                            Text("Info")
-                                .padding(8)
-                        }
-                        .foregroundColor(.white)
-                        .background(Color(.displayP3, white: 0, opacity: 0.2))
-                        .cornerRadius(8)
-                    }
-                    .padding(4)
-                    .background(Color(.displayP3, white: 0, opacity: 0.1))
-                    .cornerRadius(9)
-                    .padding(.top, 4)
+                    MenuView(viewModel: viewModel)
                 }
 
                 ProgressView(viewModel.progress)
@@ -63,6 +35,10 @@ struct MainView: View {
             .onAppear {
                 viewModel.onAppear(size: proxy.size)
             }
+            .onChange(of: proxy.size, perform: { value in
+                print("proxy size change", proxy.size)
+                viewModel.onAppear(size: proxy.size)
+            })
             .sheet(isPresented: $viewModel.isSelectingColourMap, onDismiss: viewModel.updateColourMap) {
                 ColourMapsView(current: $viewModel.colourMap)
             }
