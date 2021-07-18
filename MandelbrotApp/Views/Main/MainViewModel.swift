@@ -80,8 +80,8 @@ class MainViewModel: ObservableObject {
 
 
     func onAppear(size: CGSize) {
-        width = Int(size.width)
-        height = Int(size.height)
+        width = 2 * Int(size.width)
+        height = 2 * Int(size.height)
         config = MandelbrotSetConfig(imageWidth: width, imageHeight: height)
         generate()
     }
