@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4E1F663B2672BB420033DE8A /* ColourMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F663A2672BB420033DE8A /* ColourMapsView.swift */; };
-		4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B48214AFB3000D8D920 /* MainVC.swift */; };
 		4E263B4E214AFB3100D8D920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4D214AFB3100D8D920 /* Assets.xcassets */; };
 		4E263B51214AFB3100D8D920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */; };
 		4E263B74214B027300D8D920 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B73214B027300D8D920 /* UIImage+Extension.swift */; };
@@ -18,30 +17,6 @@
 		4EA4BB0A267D40260059790A /* ColourMapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */; };
 		4EA4BB0C267D47D90059790A /* ColourMapButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */; };
 		4EA4BB0E267D52440059790A /* MyProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */; };
-		4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */; };
-		4EA6B5F5214C72F700DA8964 /* PresentrShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */; };
-		4EA6B5F6214C72F700DA8964 /* ModalCenterPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E0214C72F600DA8964 /* ModalCenterPosition.swift */; };
-		4EA6B5F7214C72F700DA8964 /* CrossDissolveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E1214C72F700DA8964 /* CrossDissolveAnimation.swift */; };
-		4EA6B5F8214C72F700DA8964 /* Presentr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E2214C72F700DA8964 /* Presentr.swift */; };
-		4EA6B5F9214C72F700DA8964 /* PresentationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E3214C72F700DA8964 /* PresentationType.swift */; };
-		4EA6B5FA214C72F700DA8964 /* PresentrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E4214C72F700DA8964 /* PresentrController.swift */; };
-		4EA6B5FB214C72F700DA8964 /* CoverFromCornerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E5214C72F700DA8964 /* CoverFromCornerAnimation.swift */; };
-		4EA6B5FC214C72F700DA8964 /* CoverVerticalFromTopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E6214C72F700DA8964 /* CoverVerticalFromTopAnimation.swift */; };
-		4EA6B5FD214C72F700DA8964 /* CoverHorizontalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E7214C72F700DA8964 /* CoverHorizontalAnimation.swift */; };
-		4EA6B5FE214C72F700DA8964 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E8214C72F700DA8964 /* AlertViewController.xib */; };
-		4EA6B5FF214C72F700DA8964 /* CoverVerticalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5E9214C72F700DA8964 /* CoverVerticalAnimation.swift */; };
-		4EA6B600214C72F700DA8964 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5EA214C72F700DA8964 /* AlertViewController.swift */; };
-		4EA6B601214C72F700DA8964 /* ModalSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5EB214C72F700DA8964 /* ModalSize.swift */; };
-		4EA6B602214C72F700DA8964 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5EC214C72F700DA8964 /* BackgroundView.swift */; };
-		4EA6B604214C72F700DA8964 /* KeyboardTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5EE214C72F700DA8964 /* KeyboardTranslation.swift */; };
-		4EA6B605214C72F700DA8964 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EA6B5EF214C72F700DA8964 /* Montserrat-Regular.ttf */; };
-		4EA6B606214C72F700DA8964 /* Presentr+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5F0214C72F700DA8964 /* Presentr+Equatable.swift */; };
-		4EA6B607214C72F700DA8964 /* PresentrAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5F1214C72F700DA8964 /* PresentrAnimation.swift */; };
-		4EA6B608214C72F700DA8964 /* FlipHorizontalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5F2214C72F700DA8964 /* FlipHorizontalAnimation.swift */; };
-		4EA6B609214C72F700DA8964 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EA6B5F3214C72F700DA8964 /* SourceSansPro-Regular.ttf */; };
-		4EA6B60A214C72F700DA8964 /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B5F4214C72F700DA8964 /* TransitionType.swift */; };
-		4EA6B60C214C761700DA8964 /* ColourChooserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6B60B214C761700DA8964 /* ColourChooserVC.swift */; };
-		4EC2FEC2214C8F5C00DEEDC4 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2FEC1214C8F5C00DEEDC4 /* InfoVC.swift */; };
 		4EF23CE926A4D6D3009F6B8E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23CE826A4D6D3009F6B8E /* MenuView.swift */; };
 		4EF6DD04267939060050D0DF /* MandelbrotEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 4EF6DD03267939060050D0DF /* MandelbrotEngine */; };
 /* End PBXBuildFile section */
@@ -49,7 +24,6 @@
 /* Begin PBXFileReference section */
 		4E1F663A2672BB420033DE8A /* ColourMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapsView.swift; sourceTree = "<group>"; };
 		4E263B43214AFB3000D8D920 /* MandelbrotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandelbrotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E263B48214AFB3000D8D920 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4E263B4D214AFB3100D8D920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E263B50214AFB3100D8D920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E263B52214AFB3100D8D920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,31 +35,6 @@
 		4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapButtonView.swift; sourceTree = "<group>"; };
 		4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressViewStyle.swift; sourceTree = "<group>"; };
 		4EA4BB0F267D69CE0059790A /* MandelbrotApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MandelbrotApp.entitlements; sourceTree = "<group>"; };
-		4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCData.swift; sourceTree = "<group>"; };
-		4EA6B5DE214C72F600DA8964 /* Presentr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presentr.h; sourceTree = "<group>"; };
-		4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentrShadow.swift; sourceTree = "<group>"; };
-		4EA6B5E0214C72F600DA8964 /* ModalCenterPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalCenterPosition.swift; sourceTree = "<group>"; };
-		4EA6B5E1214C72F700DA8964 /* CrossDissolveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveAnimation.swift; sourceTree = "<group>"; };
-		4EA6B5E2214C72F700DA8964 /* Presentr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentr.swift; sourceTree = "<group>"; };
-		4EA6B5E3214C72F700DA8964 /* PresentationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationType.swift; sourceTree = "<group>"; };
-		4EA6B5E4214C72F700DA8964 /* PresentrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentrController.swift; sourceTree = "<group>"; };
-		4EA6B5E5214C72F700DA8964 /* CoverFromCornerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverFromCornerAnimation.swift; sourceTree = "<group>"; };
-		4EA6B5E6214C72F700DA8964 /* CoverVerticalFromTopAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverVerticalFromTopAnimation.swift; sourceTree = "<group>"; };
-		4EA6B5E7214C72F700DA8964 /* CoverHorizontalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverHorizontalAnimation.swift; sourceTree = "<group>"; };
-		4EA6B5E8214C72F700DA8964 /* AlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
-		4EA6B5E9214C72F700DA8964 /* CoverVerticalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverVerticalAnimation.swift; sourceTree = "<group>"; };
-		4EA6B5EA214C72F700DA8964 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		4EA6B5EB214C72F700DA8964 /* ModalSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalSize.swift; sourceTree = "<group>"; };
-		4EA6B5EC214C72F700DA8964 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		4EA6B5EE214C72F700DA8964 /* KeyboardTranslation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardTranslation.swift; sourceTree = "<group>"; };
-		4EA6B5EF214C72F700DA8964 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		4EA6B5F0214C72F700DA8964 /* Presentr+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Presentr+Equatable.swift"; sourceTree = "<group>"; };
-		4EA6B5F1214C72F700DA8964 /* PresentrAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentrAnimation.swift; sourceTree = "<group>"; };
-		4EA6B5F2214C72F700DA8964 /* FlipHorizontalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipHorizontalAnimation.swift; sourceTree = "<group>"; };
-		4EA6B5F3214C72F700DA8964 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
-		4EA6B5F4214C72F700DA8964 /* TransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
-		4EA6B60B214C761700DA8964 /* ColourChooserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourChooserVC.swift; sourceTree = "<group>"; };
-		4EC2FEC1214C8F5C00DEEDC4 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		4EF23CE826A4D6D3009F6B8E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,8 +91,6 @@
 				4EA4BB0F267D69CE0059790A /* MandelbrotApp.entitlements */,
 				4E263B72214B026800D8D920 /* Extensions */,
 				4E32ECB226718529005985AA /* Views */,
-				4EA6B5DB214C72AD00DA8964 /* ViewControllers */,
-				4EA6B5DC214C72C700DA8964 /* Vendor */,
 				4E32ECB726718B13005985AA /* MandelbrotApp.swift */,
 				4E263B4D214AFB3100D8D920 /* Assets.xcassets */,
 				4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */,
@@ -169,54 +116,6 @@
 				4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		4EA6B5DB214C72AD00DA8964 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4E263B48214AFB3000D8D920 /* MainVC.swift */,
-				4EA6B5D9214C68FE00DA8964 /* MainVCData.swift */,
-				4EA6B60B214C761700DA8964 /* ColourChooserVC.swift */,
-				4EC2FEC1214C8F5C00DEEDC4 /* InfoVC.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		4EA6B5DC214C72C700DA8964 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				4EA6B5DD214C72D200DA8964 /* Presentr-1.3.1 */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
-		4EA6B5DD214C72D200DA8964 /* Presentr-1.3.1 */ = {
-			isa = PBXGroup;
-			children = (
-				4EA6B5EA214C72F700DA8964 /* AlertViewController.swift */,
-				4EA6B5E8214C72F700DA8964 /* AlertViewController.xib */,
-				4EA6B5EC214C72F700DA8964 /* BackgroundView.swift */,
-				4EA6B5E5214C72F700DA8964 /* CoverFromCornerAnimation.swift */,
-				4EA6B5E7214C72F700DA8964 /* CoverHorizontalAnimation.swift */,
-				4EA6B5E9214C72F700DA8964 /* CoverVerticalAnimation.swift */,
-				4EA6B5E6214C72F700DA8964 /* CoverVerticalFromTopAnimation.swift */,
-				4EA6B5E1214C72F700DA8964 /* CrossDissolveAnimation.swift */,
-				4EA6B5F2214C72F700DA8964 /* FlipHorizontalAnimation.swift */,
-				4EA6B5EE214C72F700DA8964 /* KeyboardTranslation.swift */,
-				4EA6B5E0214C72F600DA8964 /* ModalCenterPosition.swift */,
-				4EA6B5EB214C72F700DA8964 /* ModalSize.swift */,
-				4EA6B5EF214C72F700DA8964 /* Montserrat-Regular.ttf */,
-				4EA6B5E3214C72F700DA8964 /* PresentationType.swift */,
-				4EA6B5DE214C72F600DA8964 /* Presentr.h */,
-				4EA6B5E2214C72F700DA8964 /* Presentr.swift */,
-				4EA6B5F0214C72F700DA8964 /* Presentr+Equatable.swift */,
-				4EA6B5F1214C72F700DA8964 /* PresentrAnimation.swift */,
-				4EA6B5E4214C72F700DA8964 /* PresentrController.swift */,
-				4EA6B5DF214C72F600DA8964 /* PresentrShadow.swift */,
-				4EA6B5F3214C72F700DA8964 /* SourceSansPro-Regular.ttf */,
-				4EA6B5F4214C72F700DA8964 /* TransitionType.swift */,
-			);
-			path = "Presentr-1.3.1";
 			sourceTree = "<group>";
 		};
 		4EF23CE726A4D6C2009F6B8E /* Menu */ = {
@@ -292,11 +191,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EA6B605214C72F700DA8964 /* Montserrat-Regular.ttf in Resources */,
 				4E263B51214AFB3100D8D920 /* LaunchScreen.storyboard in Resources */,
 				4E263B4E214AFB3100D8D920 /* Assets.xcassets in Resources */,
-				4EA6B609214C72F700DA8964 /* SourceSansPro-Regular.ttf in Resources */,
-				4EA6B5FE214C72F700DA8964 /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,37 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EA6B608214C72F700DA8964 /* FlipHorizontalAnimation.swift in Sources */,
 				4E263B74214B027300D8D920 /* UIImage+Extension.swift in Sources */,
 				4EF23CE926A4D6D3009F6B8E /* MenuView.swift in Sources */,
-				4EA6B5F6214C72F700DA8964 /* ModalCenterPosition.swift in Sources */,
-				4EA6B5FA214C72F700DA8964 /* PresentrController.swift in Sources */,
 				4E1F663B2672BB420033DE8A /* ColourMapsView.swift in Sources */,
-				4EA6B5FC214C72F700DA8964 /* CoverVerticalFromTopAnimation.swift in Sources */,
-				4EA6B5DA214C68FE00DA8964 /* MainVCData.swift in Sources */,
-				4EA6B5FB214C72F700DA8964 /* CoverFromCornerAnimation.swift in Sources */,
-				4EA6B60A214C72F700DA8964 /* TransitionType.swift in Sources */,
-				4EA6B60C214C761700DA8964 /* ColourChooserVC.swift in Sources */,
-				4EA6B602214C72F700DA8964 /* BackgroundView.swift in Sources */,
-				4EA6B5F9214C72F700DA8964 /* PresentationType.swift in Sources */,
 				4EA4BB0A267D40260059790A /* ColourMapsViewModel.swift in Sources */,
-				4EA6B5F8214C72F700DA8964 /* Presentr.swift in Sources */,
 				4E32ECB42671853C005985AA /* MainView.swift in Sources */,
-				4EA6B600214C72F700DA8964 /* AlertViewController.swift in Sources */,
 				4E32ECB826718B13005985AA /* MandelbrotApp.swift in Sources */,
-				4E263B49214AFB3000D8D920 /* MainVC.swift in Sources */,
-				4EA6B607214C72F700DA8964 /* PresentrAnimation.swift in Sources */,
-				4EA6B601214C72F700DA8964 /* ModalSize.swift in Sources */,
 				4EA4BB0E267D52440059790A /* MyProgressViewStyle.swift in Sources */,
-				4EA6B5F5214C72F700DA8964 /* PresentrShadow.swift in Sources */,
-				4EA6B604214C72F700DA8964 /* KeyboardTranslation.swift in Sources */,
-				4EA6B5FD214C72F700DA8964 /* CoverHorizontalAnimation.swift in Sources */,
-				4EA6B606214C72F700DA8964 /* Presentr+Equatable.swift in Sources */,
 				4E32ECB626718986005985AA /* MainViewModel.swift in Sources */,
-				4EA6B5F7214C72F700DA8964 /* CrossDissolveAnimation.swift in Sources */,
 				4EA4BB0C267D47D90059790A /* ColourMapButtonView.swift in Sources */,
-				4EC2FEC2214C8F5C00DEEDC4 /* InfoVC.swift in Sources */,
-				4EA6B5FF214C72F700DA8964 /* CoverVerticalAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
