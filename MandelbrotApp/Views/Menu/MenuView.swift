@@ -13,34 +13,31 @@ struct MenuView: View {
 
     var body: some View {
         VStack(alignment: .trailing, spacing: 10) {
-            Button(action: viewModel.reset) {
-                Text("Reset")
-                    .padding(8)
-            }
-            .foregroundColor(.white)
-            .background(Color(.displayP3, white: 0, opacity: 0.2))
-            .cornerRadius(8)
+            button(title: "Reset", action: viewModel.reset)
 
-            Button(action: viewModel.selectColourMap) {
-                Text("Colour")
-                    .padding(8)
-            }
-            .foregroundColor(.white)
-            .background(Color(.displayP3, white: 0, opacity: 0.2))
-            .cornerRadius(8)
+            button(title: "Colour", action: viewModel.selectColourMap)
 
-            Button(action: viewModel.info) {
-                Text("Info")
-                    .padding(8)
-            }
-            .foregroundColor(.white)
-            .background(Color(.displayP3, white: 0, opacity: 0.2))
-            .cornerRadius(8)
+            button(title: "Info", action: viewModel.info)
         }
-        .padding(4)
+        .padding(10)
         .background(Color(.displayP3, white: 0, opacity: 0.1))
         .cornerRadius(9)
-        .padding(.top, 4)
+        .padding([.top, .trailing], 4)
+    }
+}
+
+
+// MARK: - Private
+
+private extension MenuView {
+    func button(title: String, action: @escaping () -> Void) -> some View{
+        Button(action: action) {
+            Text(title)
+                .padding(8)
+        }
+        .foregroundColor(.white)
+        .background(Color(.displayP3, white: 0, opacity: 0.2))
+        .cornerRadius(8)
     }
 }
 
