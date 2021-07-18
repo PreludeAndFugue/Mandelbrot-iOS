@@ -32,13 +32,13 @@ struct MainView: View {
                     .opacity(viewModel.isInProgress ? 1 : 0)
                     .progressViewStyle(MyProgressViewStyle())
             }
+            .overlay(DisclosureInfoView(viewModel: viewModel), alignment: .bottomLeading)
             .onAppear {
                 viewModel.onAppear(size: proxy.size)
             }
-            .onChange(of: proxy.size, perform: { value in
-                print("proxy size change", proxy.size)
+            .onChange(of: proxy.size) { value in
                 viewModel.onAppear(size: proxy.size)
-            })
+            }
             .sheet(isPresented: $viewModel.isSelectingColourMap, onDismiss: viewModel.updateColourMap) {
                 ColourMapsView(current: $viewModel.colourMap)
             }

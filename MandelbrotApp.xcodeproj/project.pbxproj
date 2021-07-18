@@ -18,6 +18,7 @@
 		4EA4BB0C267D47D90059790A /* ColourMapButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */; };
 		4EA4BB0E267D52440059790A /* MyProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */; };
 		4EF23CE926A4D6D3009F6B8E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23CE826A4D6D3009F6B8E /* MenuView.swift */; };
+		4EF23CEC26A4DCFA009F6B8E /* DisclosureInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23CEB26A4DCFA009F6B8E /* DisclosureInfoView.swift */; };
 		4EF6DD04267939060050D0DF /* MandelbrotEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 4EF6DD03267939060050D0DF /* MandelbrotEngine */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourMapButtonView.swift; sourceTree = "<group>"; };
 		4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressViewStyle.swift; sourceTree = "<group>"; };
 		4EF23CE826A4D6D3009F6B8E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		4EF23CEB26A4DCFA009F6B8E /* DisclosureInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4E1F66392672BB340033DE8A /* ColourMaps */,
+				4EF23CEA26A4DCE8009F6B8E /* DisclosureInfo */,
 				4E1F66382672BB2A0033DE8A /* Main */,
 				4EF23CE726A4D6C2009F6B8E /* Menu */,
 				4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */,
@@ -122,6 +125,14 @@
 				4EF23CE826A4D6D3009F6B8E /* MenuView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		4EF23CEA26A4DCE8009F6B8E /* DisclosureInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4EF23CEB26A4DCFA009F6B8E /* DisclosureInfoView.swift */,
+			);
+			path = DisclosureInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E263B74214B027300D8D920 /* UIImage+Extension.swift in Sources */,
+				4EF23CEC26A4DCFA009F6B8E /* DisclosureInfoView.swift in Sources */,
 				4EF23CE926A4D6D3009F6B8E /* MenuView.swift in Sources */,
 				4E1F663B2672BB420033DE8A /* ColourMapsView.swift in Sources */,
 				4EA4BB0A267D40260059790A /* ColourMapsViewModel.swift in Sources */,

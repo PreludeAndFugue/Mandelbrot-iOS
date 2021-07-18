@@ -16,8 +16,6 @@ struct MenuView: View {
             button(title: "Reset", action: viewModel.reset)
 
             button(title: "Colour", action: viewModel.selectColourMap)
-
-            button(title: "Info", action: viewModel.info)
         }
         .padding(10)
         .background(Color(.displayP3, white: 0, opacity: 0.1))

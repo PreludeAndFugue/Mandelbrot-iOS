@@ -14,6 +14,12 @@ import UIKit
 import MandelbrotEngine
 
 class MainViewModel: ObservableObject {
+    struct Info {
+        let maxIterations: Int
+        let totalIterations: Int
+        let time: TimeInterval
+    }
+
     private var width = 0
     private var height = 0
     private let colourMaps = ColourMapFactory.maps
@@ -28,6 +34,8 @@ class MainViewModel: ObservableObject {
     @Published var isSelectingColourMap = false
     @Published var image = UIImage()
 
+    @Published var info = Info(maxIterations: 0, totalIterations: 0, time: 0)
+
 
     func reset() {
         config = MandelbrotSetConfig(imageWidth: width, imageHeight: height)
@@ -38,11 +46,6 @@ class MainViewModel: ObservableObject {
 
     func selectColourMap() {
         isSelectingColourMap.toggle()
-    }
-
-
-    func info() {
-        print("info")
     }
 
 
@@ -77,7 +80,6 @@ class MainViewModel: ObservableObject {
 
 
     func onAppear(size: CGSize) {
-        print("on appear", size)
         width = Int(size.width)
         height = Int(size.height)
         config = MandelbrotSetConfig(imageWidth: width, imageHeight: height)
@@ -86,7 +88,15 @@ class MainViewModel: ObservableObject {
 
 
     func timerAction(dt: TimeInterval) {
-        print("time", dt)
+        guard let s = mandelbrotSet else { return }
+        let total = s.gridIterations(config: config)
+        DispatchQueue.main.async {
+            self.info = Info(
+                maxIterations: self.config.iterations,
+                totalIterations: total,
+                time: dt
+            )
+        }
     }
 }
 
