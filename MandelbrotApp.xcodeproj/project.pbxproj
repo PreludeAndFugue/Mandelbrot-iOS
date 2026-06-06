@@ -3,23 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4E1F663B2672BB420033DE8A /* ColourMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F663A2672BB420033DE8A /* ColourMapsView.swift */; };
 		4E263B4E214AFB3100D8D920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4D214AFB3100D8D920 /* Assets.xcassets */; };
-		4E263B51214AFB3100D8D920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */; };
+		4E263B51214AFB3100D8D920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E263B4F214AFB3100D8D920 /* LaunchScreen.storyboard */; platformFilter = ios; };
 		4E263B74214B027300D8D920 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E263B73214B027300D8D920 /* UIImage+Extension.swift */; };
 		4E32ECB42671853C005985AA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB32671853C005985AA /* MainView.swift */; };
 		4E32ECB626718986005985AA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB526718986005985AA /* MainViewModel.swift */; };
 		4E32ECB826718B13005985AA /* MandelbrotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32ECB726718B13005985AA /* MandelbrotApp.swift */; };
+		4E931C7E2FD48E45003C1D34 /* MandelbrotEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 4E931C7D2FD48E45003C1D34 /* MandelbrotEngine */; };
 		4EA4BB0A267D40260059790A /* ColourMapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB09267D40260059790A /* ColourMapsViewModel.swift */; };
 		4EA4BB0C267D47D90059790A /* ColourMapButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0B267D47D90059790A /* ColourMapButtonView.swift */; };
 		4EA4BB0E267D52440059790A /* MyProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4BB0D267D52440059790A /* MyProgressViewStyle.swift */; };
 		4EF23CE926A4D6D3009F6B8E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23CE826A4D6D3009F6B8E /* MenuView.swift */; };
 		4EF23CEC26A4DCFA009F6B8E /* DisclosureInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF23CEB26A4DCFA009F6B8E /* DisclosureInfoView.swift */; };
-		4EF6DD04267939060050D0DF /* MandelbrotEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 4EF6DD03267939060050D0DF /* MandelbrotEngine */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF6DD04267939060050D0DF /* MandelbrotEngine in Frameworks */,
+				4E931C7E2FD48E45003C1D34 /* MandelbrotEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +152,7 @@
 			);
 			name = MandelbrotApp;
 			packageProductDependencies = (
-				4EF6DD03267939060050D0DF /* MandelbrotEngine */,
+				4E931C7D2FD48E45003C1D34 /* MandelbrotEngine */,
 			);
 			productName = MandelbrotApp;
 			productReference = 4E263B43214AFB3000D8D920 /* MandelbrotApp.app */;
@@ -164,8 +164,9 @@
 		4E263B3B214AFB3000D8D920 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 2640;
 				ORGANIZATIONNAME = "Gary Kerr";
 				TargetAttributes = {
 					4E263B42214AFB3000D8D920 = {
@@ -184,7 +185,7 @@
 			);
 			mainGroup = 4E263B3A214AFB3000D8D920;
 			packageReferences = (
-				4EF6DD02267939060050D0DF /* XCRemoteSwiftPackageReference "MandelbrotEngine" */,
+				4E931C7C2FD48E45003C1D34 /* XCRemoteSwiftPackageReference "MandelbrotEngine" */,
 			);
 			productRefGroup = 4E263B44214AFB3000D8D920 /* Products */;
 			projectDirPath = "";
@@ -275,8 +276,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = T59AZ797LW;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -296,6 +299,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -337,8 +341,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = T59AZ797LW;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -351,6 +357,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -363,8 +370,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = T59AZ797LW;
+				CURRENT_PROJECT_VERSION = 9;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				INFOPLIST_FILE = MandelbrotApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -373,9 +382,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.MandelbrotApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -385,8 +398,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = T59AZ797LW;
+				CURRENT_PROJECT_VERSION = 9;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				INFOPLIST_FILE = MandelbrotApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -395,9 +410,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.MandelbrotApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};
@@ -425,9 +444,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4EF6DD02267939060050D0DF /* XCRemoteSwiftPackageReference "MandelbrotEngine" */ = {
+		4E931C7C2FD48E45003C1D34 /* XCRemoteSwiftPackageReference "MandelbrotEngine" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/PreludeAndFugue/MandelbrotEngine";
+			repositoryURL = /Users/gary/Documents/computing/ios/MandelbrotEngine;
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.14.0;
@@ -436,9 +455,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4EF6DD03267939060050D0DF /* MandelbrotEngine */ = {
+		4E931C7D2FD48E45003C1D34 /* MandelbrotEngine */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4EF6DD02267939060050D0DF /* XCRemoteSwiftPackageReference "MandelbrotEngine" */;
+			package = 4E931C7C2FD48E45003C1D34 /* XCRemoteSwiftPackageReference "MandelbrotEngine" */;
 			productName = MandelbrotEngine;
 		};
 /* End XCSwiftPackageProductDependency section */

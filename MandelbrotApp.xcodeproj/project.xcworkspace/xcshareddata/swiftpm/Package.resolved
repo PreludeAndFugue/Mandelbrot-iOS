@@ -1,16 +1,15 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "MandelbrotEngine",
-        "repositoryURL": "https://github.com/PreludeAndFugue/MandelbrotEngine",
-        "state": {
-          "branch": null,
-          "revision": "270146d6a4978b2c9ff3d55829458d012dd7fc66",
-          "version": "0.14.0"
-        }
+  "originHash" : "0dac124376c2689ee32e7a2e357adf506d12f4aa9359780413f2440452d3b47f",
+  "pins" : [
+    {
+      "identity" : "mandelbrotengine",
+      "kind" : "localSourceControl",
+      "location" : "/Users/gary/Documents/computing/ios/MandelbrotEngine",
+      "state" : {
+        "revision" : "3d46945255d2af94f67c5d5f5dcd22439324cf20",
+        "version" : "0.18.0"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 3
 }
