@@ -12,23 +12,33 @@ import MandelbrotEngine
 
 struct ColourMapButtonView: View {
     var map: ColourMapProtocol
+    var isSelected = false
+    var tileSize: CGFloat = 100
     var action: (ColourMapProtocol) -> Void
 
     var body: some View {
         Button(action: { action(map) }) {
-            ZStack(alignment: .bottomLeading) {
+            ZStack(alignment: .bottom) {
                 imageView(for: map)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: tileSize, height: tileSize)
+                    .clipped()
 
                 Text(map.title)
                     .font(.caption)
+                    .lineLimit(1)
                     .padding(4)
                     .frame(maxWidth: .infinity)
                     .background(Color("ColourMapNameBackground"))
             }
-            .cornerRadius(8)
+            .frame(width: tileSize, height: tileSize)
+            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    .strokeBorder(isSelected ? Color.accentColor : Color.clear, lineWidth: 3)
+            }
+            .contentShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
         }
         .buttonStyle(PlainButtonStyle())
     }
