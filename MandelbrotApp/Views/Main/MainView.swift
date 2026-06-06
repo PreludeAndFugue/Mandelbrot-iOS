@@ -15,7 +15,7 @@ struct MainView: View {
         GeometryReader { proxy in
             ZStack {
                 ZStack(alignment: .topTrailing) {
-                    Image(uiImage: viewModel.image)
+                    mandelbrotImage
                         .resizable()
                         .scaledToFill()
                         .background(Color.black)
@@ -51,6 +51,15 @@ struct MainView: View {
 // MARK: - Private
 
 private extension MainView {
+    var mandelbrotImage: Image {
+#if os(macOS)
+        Image(nsImage: viewModel.image)
+#else
+        Image(uiImage: viewModel.image)
+#endif
+    }
+
+
     func makeGesture() -> _ChangedGesture<DragGesture> {
         DragGesture(minimumDistance: 0, coordinateSpace: .local)
             .onChanged() { value in

@@ -29,7 +29,7 @@ struct ColourMapsView: View {
                 }
             }
             .padding()
-            .navigationBarTitle(Text("Colour Maps"))
+            .navigationTitle(Text("Colour Maps"))
         }
     }
 

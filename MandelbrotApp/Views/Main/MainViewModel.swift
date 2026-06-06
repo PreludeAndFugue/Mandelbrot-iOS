@@ -9,7 +9,6 @@
 import Combine
 import CoreGraphics
 import Foundation
-import UIKit
 
 import MandelbrotEngine
 
@@ -32,7 +31,7 @@ class MainViewModel: ObservableObject {
     @Published var progress = Progress(totalUnitCount: 100)
     @Published var isInProgress = false
     @Published var isSelectingColourMap = false
-    @Published var image = UIImage()
+    @Published var image = PlatformImage()
 
     @Published var info = Info(maxIterations: 0, totalIterations: 0, time: 0)
 
@@ -59,7 +58,7 @@ class MainViewModel: ObservableObject {
                 timer: self.timerAction(dt:)
             )
             DispatchQueue.main.async {
-                self.image = UIImage.from(mandelbrotSet: self.mandelbrotSet, colourMap: self.colourMap)
+                self.image = PlatformImage.from(mandelbrotSet: self.mandelbrotSet, colourMap: self.colourMap)
                 self.isInProgress = false
             }
         }
@@ -67,7 +66,7 @@ class MainViewModel: ObservableObject {
 
 
     func updateColourMap() {
-        image = UIImage.from(mandelbrotSet: mandelbrotSet, colourMap: colourMap)
+        image = PlatformImage.from(mandelbrotSet: mandelbrotSet, colourMap: colourMap)
     }
 
 

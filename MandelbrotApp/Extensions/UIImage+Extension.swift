@@ -6,14 +6,20 @@
 //  Copyright © 2017 Gary Kerr. All rights reserved.
 //
 
+#if os(macOS)
+import AppKit
+typealias PlatformImage = NSImage
+#else
 import UIKit
+typealias PlatformImage = UIImage
+#endif
 
 import MandelbrotEngine
 
-extension UIImage {
+extension PlatformImage {
 
     // http://blog.human-friendly.com/drawing-images-from-pixel-data-in-swift
-    static func from(pixels: [Pixel], width: Int, height: Int) -> UIImage {
+    static func from(pixels: [Pixel], width: Int, height: Int) -> PlatformImage {
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo: CGBitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue)
 
@@ -45,17 +51,21 @@ extension UIImage {
             intent: CGColorRenderingIntent.defaultIntent
         ) else { fatalError("Couldn't create CGImage") }
 
+#if os(macOS)
+        return NSImage(cgImage: image, size: NSSize(width: width, height: height))
+#else
         return UIImage(cgImage: image)
+#endif
     }
 
 
-    static func from(pixels: [Pixel]) -> UIImage {
+    static func from(pixels: [Pixel]) -> PlatformImage {
         let width = Int(sqrt(Double(pixels.count)))
         return from(pixels: pixels, width: width, height: width)
     }
 
 
-    static func from(mandelbrotSet: MandelbrotSet, colourMap: ColourMapProtocol) -> UIImage {
+    static func from(mandelbrotSet: MandelbrotSet, colourMap: ColourMapProtocol) -> PlatformImage {
         let pixels = mandelbrotSet.grid.map({ colourMap.pixel(from: $0.test) })
         return from(
             pixels: pixels,

@@ -17,7 +17,7 @@ struct ColourMapButtonView: View {
     var body: some View {
         Button(action: { action(map) }) {
             ZStack(alignment: .bottomLeading) {
-                Image(uiImage: image(for: map))
+                imageView(for: map)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
@@ -34,11 +34,24 @@ struct ColourMapButtonView: View {
     }
 
 
-    func image(for map: ColourMapProtocol) -> UIImage {
+    func imageView(for map: ColourMapProtocol) -> Image {
+#if os(macOS)
+        Image(nsImage: image(for: map))
+#else
+        Image(uiImage: image(for: map))
+#endif
+    }
+
+
+    func image(for map: ColourMapProtocol) -> PlatformImage {
         if map.preview.isEmpty {
+#if os(macOS)
+            return NSImage(systemSymbolName: "questionmark.circle", accessibilityDescription: nil)!
+#else
             return UIImage(systemName: "questionmark.circle")!
+#endif
         } else {
-            return UIImage.from(pixels: map.preview)
+            return PlatformImage.from(pixels: map.preview)
         }
     }
 }
