@@ -6,8 +6,8 @@
       "kind" : "localSourceControl",
       "location" : "/Users/gary/Documents/computing/ios/MandelbrotEngine",
       "state" : {
-        "revision" : "3d46945255d2af94f67c5d5f5dcd22439324cf20",
-        "version" : "0.18.0"
+        "revision" : "513299a0f51e1c56cf0fb76433ff6b0cf8ff606c",
+        "version" : "0.21.0"
       }
     }
   ],
