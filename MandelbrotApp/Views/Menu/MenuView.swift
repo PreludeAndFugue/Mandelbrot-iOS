@@ -31,7 +31,10 @@ private extension MenuView {
     func button(title: String, action: @escaping () -> Void) -> some View{
         Button(action: action) {
             Text(title)
-                .padding(8)
+                .font(.system(size: 17, weight: .semibold))
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
+                .frame(minWidth: 92)
         }
         .foregroundColor(.white)
         .background(Color(.displayP3, white: 0, opacity: 0.2))

@@ -37,6 +37,7 @@ struct DisclosureInfoView: View {
         )
         .accentColor(.accentColor)
         .padding(6)
+        .font(.system(size: 17, weight: .regular))
         .foregroundColor(.white)
         .background(Color.black.opacity(0.4))
         .cornerRadius(9)
@@ -61,13 +62,14 @@ private extension DisclosureInfoView {
     func content() -> some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("MAX ITERATIONS ").font(.system(size: 11))
+                Text("MAX ITERATIONS ").font(.system(size: 11, weight: .semibold))
                     + Text(maxIterations)
-                Text("TOTAL ITERATIONS ").font(.system(size: 11))
+                Text("TOTAL ITERATIONS ").font(.system(size: 11, weight: .semibold))
                     + Text(totalIterations)
-                Text("TIME ").font(.system(size: 11))
+                Text("TIME ").font(.system(size: 11, weight: .semibold))
                     + Text(time)
             }
+            .font(.system(size: 13))
             Spacer()
         }
     }

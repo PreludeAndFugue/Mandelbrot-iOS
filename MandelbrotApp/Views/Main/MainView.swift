@@ -13,36 +13,12 @@ struct MainView: View {
 
     var body: some View {
         GeometryReader { proxy in
-            ZStack {
-                ZStack(alignment: .topTrailing) {
-                    mandelbrotImage
-                        .resizable()
-                        .scaledToFill()
-                        .background(Color.black)
-                        .ignoresSafeArea()
-                        .gesture(makeGesture())
-
-                    MenuView(viewModel: viewModel)
-                }
-
-                ProgressView(viewModel.progress)
-                    .frame(width: 250, height: 5)
-                    .padding()
-                    .background(Color(.displayP3, white: 1, opacity: 0.15))
-                    .cornerRadius(16)
-                    .opacity(viewModel.isInProgress ? 1 : 0)
-                    .progressViewStyle(MyProgressViewStyle())
-            }
-            .overlay(DisclosureInfoView(viewModel: viewModel), alignment: .bottomLeading)
-            .onAppear {
-                viewModel.onAppear(size: proxy.size)
-            }
-            .onChange(of: proxy.size) { value in
-                viewModel.onAppear(size: proxy.size)
-            }
-            .sheet(isPresented: $viewModel.isSelectingColourMap, onDismiss: viewModel.updateColourMap) {
-                ColourMapsView(current: $viewModel.colourMap)
-            }
+#if os(iOS)
+            content(proxy: proxy)
+                .ignoresSafeArea()
+#else
+            content(proxy: proxy)
+#endif
         }
     }
 }
@@ -51,6 +27,63 @@ struct MainView: View {
 // MARK: - Private
 
 private extension MainView {
+    func content(proxy: GeometryProxy) -> some View {
+        let canvasSize = canvasSize(proxy: proxy)
+
+        return ZStack {
+            ZStack(alignment: .topTrailing) {
+                mandelbrotImage
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: canvasSize.width, height: canvasSize.height)
+                    .background(Color.black)
+                    .clipped()
+                    .contentShape(Rectangle())
+                    .gesture(makeGesture())
+
+                MenuView(viewModel: viewModel)
+                    .padding(.top, proxy.safeAreaInsets.top)
+                    .padding(.trailing, proxy.safeAreaInsets.trailing)
+            }
+
+            ProgressView(viewModel.progress)
+                .frame(width: 250, height: 5)
+                .padding()
+                .background(Color(.displayP3, white: 1, opacity: 0.15))
+                .cornerRadius(16)
+                .opacity(viewModel.isInProgress ? 1 : 0)
+                .progressViewStyle(MyProgressViewStyle())
+        }
+        .overlay(alignment: .bottomLeading) {
+            DisclosureInfoView(viewModel: viewModel)
+                .padding(.leading, proxy.safeAreaInsets.leading)
+                .padding(.bottom, proxy.safeAreaInsets.bottom)
+        }
+        .background(Color.black)
+        .onAppear {
+            viewModel.onAppear(size: canvasSize)
+        }
+        .onChange(of: proxy.size) { value in
+            viewModel.onAppear(size: canvasSize)
+        }
+        .sheet(isPresented: $viewModel.isSelectingColourMap, onDismiss: viewModel.updateColourMap) {
+            ColourMapsView(current: $viewModel.colourMap)
+        }
+    }
+
+
+    func canvasSize(proxy: GeometryProxy) -> CGSize {
+#if os(iOS)
+        CGSize(
+            width: proxy.size.width + proxy.safeAreaInsets.leading + proxy.safeAreaInsets.trailing,
+            height: proxy.size.height + proxy.safeAreaInsets.top + proxy.safeAreaInsets.bottom
+        )
+#else
+        proxy.size
+#endif
+    }
+
+
     var mandelbrotImage: Image {
 #if os(macOS)
         Image(nsImage: viewModel.image)
